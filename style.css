@@ -46,7 +46,9 @@ body, html {
     
 }
 
-form>input {
+#username,
+#password,
+#confirm-password {
     color:white;
     width:90%;
     margin-bottom:15px;
@@ -94,3 +96,33 @@ form {
 }
 
 /* ----------------- index.html ----------------- */
+
+/* ----------------- login.html ----------------- */
+
+#login-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:250px;
+    height:250px;
+}
+
+#login-username,
+#login-password {
+    color:white;
+    width:50%;
+    padding:10px;
+    margin-bottom:25px;
+    background-color:rgb(134, 31, 31);
+    border:0px;
+    
+}
+
+.login-form {
+    text-align:center;
+}
+
+
+
+
+/* ----------------- login.html ----------------- */
