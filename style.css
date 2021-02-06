@@ -25,6 +25,7 @@ body, html {
 #login-btn {
     padding:5px;
     border:0px;
+    
     text-align:center;
     margin-top:50px;
     padding:10px;
@@ -42,9 +43,16 @@ body, html {
 
 .login-picture-container {
     text-align: center;
-    margin-top:35px;
+    box-sizing:border-box;
+    margin-right:0px;
+    margin-left:0px;
+}
+
+.external-cointainer {
+    height:100%;
     
 }
+
 
 #username,
 #password,
@@ -99,6 +107,11 @@ form {
 
 /* ----------------- login.html ----------------- */
 
+#login-logo2 {
+    height:20%;
+}
+
+
 #login-logo {
     display: block;
     margin-left: auto;
@@ -122,7 +135,15 @@ form {
     text-align:center;
 }
 
-
+#login-btn2 {
+    width:50%;
+    border:0px;
+    margin-top:0px;
+    padding:8px;
+    background-color:rgb(223, 79, 79);
+    color:white;
+    box-shadow: 5px 5px 6px -4px #000000;
+}
 
 
 /* ----------------- login.html ----------------- */
