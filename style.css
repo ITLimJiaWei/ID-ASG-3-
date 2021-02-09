@@ -10,6 +10,7 @@
     background-size: cover;
     background-position: center;
     margin: 0px;
+    
 }
 
 #login-page{
@@ -107,12 +108,14 @@ form {
     margin-bottom:-40px;
 }
 
-#signup-desc {
+
+
+#login-desc {
     font-family: 'Roboto Slab', serif;
     font-size:45px;
 }
 
-#signup-page p {
+#signup-page  {
     color:white;
 }
 
@@ -129,6 +132,8 @@ form {
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
 }
+
+
 
 /* ----------------- index.html ----------------- */
 
