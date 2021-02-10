@@ -38,7 +38,6 @@ body, html {
 #signup-btn {
     padding:5px;
     border:0px;
-    
     text-align:center;
     margin-top:50px;
     padding:10px;
@@ -52,7 +51,6 @@ body, html {
 #toplogin-btn {
     padding:5px;
     border:0px;
-    
     text-align:center;
     margin-top:50px;
     padding:10px;
@@ -76,10 +74,6 @@ body, html {
     margin-left:0px;
 }
 
-.external-cointainer {
-    height:100%;
-    
-}
 
 
 #signup-username,
@@ -140,16 +134,7 @@ form {
 /* ----------------- login.html ----------------- */
 
 #login-logo2 {
-    height:20%;
-}
-
-
-#login-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:250px;
-    height:250px;
+    height:350px;
 }
 
 #login-username,
@@ -179,3 +164,11 @@ form {
 
 
 /* ----------------- login.html ----------------- */
+
+/* ----------------- home.html ----------------- */
+
+
+
+
+
+/* ----------------- home.html ----------------- */
