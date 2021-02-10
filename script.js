@@ -3,6 +3,36 @@ let currentUser;
 
 $(document).ready(function () {
 
+    $("#signup-username").on("focusout",function(){
+        let username =  $("#signup-username").val();
+        let query = '"username":"'+username+'"';
+        let settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://idasg3-3b63.restdb.io/rest/pokeplanner?q={"+query+"}",
+            "method": "GET", 
+            "headers": {
+            "content-type": "application/json",
+            "x-apikey": APIKEY,
+            "cache-control": "no-cache"
+            }
+        }
+        $.ajax(settings).done(function (response) {
+            console.log("Checking for user");
+            console.log(response);
+            if(jQuery.isEmptyObject(response)){
+                console.log("No exisitng user found, proceed");
+                $("#signup-btn"). attr("disabled", false);
+            }else{
+                console.log("Exisitng user found")
+                alert("Existing user found!")
+                $("#signup-form").trigger("reset");
+                $("#signup-btn"). attr("disabled", true);
+            }
+        });
+    });
+
+
     $("#signup-btn").on("click", function (e) {
         e.preventDefault();
 
@@ -47,18 +77,47 @@ $(document).ready(function () {
                 $("#signup-form").trigger("reset");
                 }
             }
-            if(checkUser(signupUsername)){
-                $.ajax(settings).done(function (response) {
-                    console.log("Creating new user");            
-                    getUser(signupUsername,signupPassword);   
-                    //window.location.href = "home.html";       
-                });        
-            }else{
-                console.log("User exists");
-            }      
+            
+            $.ajax(settings).done(function (response) {
+                console.log("Creating new user");            
+                sessionStorage.setItem("username",signupUsername)
+                sessionStorage.setItem("password",signupPassword)  
+                window.location.href = "home.html";       
+            });                       
         }else{
             alert("Wrong input!");
         }
+    });
+
+    
+    //Login Page
+
+    $("#login-username").on("focusout",function(){
+        let username =  $("#login-username").val();
+        let query = '"username":"'+username+'"';
+        let settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://idasg3-3b63.restdb.io/rest/pokeplanner?q={"+query+"}",
+            "method": "GET", 
+            "headers": {
+            "content-type": "application/json",
+            "x-apikey": APIKEY,
+            "cache-control": "no-cache"
+            }
+        }
+        $.ajax(settings).done(function (response) {
+            console.log("Checking for user");
+            console.log(response);
+            if(jQuery.isEmptyObject(response)){
+                alert("No exisitng user found");
+                $("#login-form").trigger("reset");
+                $("#login-btn"). attr("disabled", true);
+            }else{
+                console.log("User Exists")
+                $("#login-btn"). attr("disabled", false);
+            }
+        });
     });
 
     $("#login-btn").on("click", function (e) {
@@ -89,56 +148,12 @@ $(document).ready(function () {
             }
             $.ajax(settings).done(function (response) {
                 console.log(response);
-                currentUser=response;
-                //window.location.href = "home.html";
+                sessionStorage.setItem("username",loginUsername)
+                sessionStorage.setItem("password",loginPassword)  
+                window.location.href = "home.html";       
             });
         }else{
             alert("Wrong input!");
         }
     });
 });
-
-function getUser(username,password){
-    let query = '"username":"'+username+'","password":"'+password+'"';
-    let settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://idasg3-3b63.restdb.io/rest/pokeplanner?q={"+query+"}",
-        "method": "GET", 
-        "headers": {
-          "content-type": "application/json",
-          "x-apikey": APIKEY,
-          "cache-control": "no-cache"
-        }
-      }
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-        currentUser=response;
-    });
-}
-
-function checkUser(username){
-    let query = '"username":"'+username+'"';
-    let settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://idasg3-3b63.restdb.io/rest/pokeplanner?q={"+query+"}",
-        "method": "GET", 
-        "headers": {
-          "content-type": "application/json",
-          "x-apikey": APIKEY,
-          "cache-control": "no-cache"
-        }
-      }
-    $.ajax(settings).done(function (response) {
-        console.log("Checking for user");
-        console.log(response);
-        if(jQuery.isEmptyObject(response)){
-            console.log("No exisitng user found, proceed");
-            return false;
-        }else{
-            console.log("Exisitng user found")
-            return true;
-        }
-    });
-}
