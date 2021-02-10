@@ -25,10 +25,7 @@
     margin: 0px;
 }
 
-body, html {
-    height:100%;
-   
-}
+
 
 .logo {
     width:150px;
@@ -167,7 +164,9 @@ form {
 
 /* ----------------- home.html ----------------- */
 
-
+#home-page {
+    background-color: rgb(172, 50, 50);
+}
 
 
 
