@@ -25,11 +25,15 @@
     margin: 0px;
 }
 
-
+.signup-top-container {
+    box-shadow: 5px 5px 6px -4px #000000;
+    background-color:rgb(223, 79, 79);
+    margin-bottom:20px;
+}
 
 .logo {
-    width:150px;
-    height:150px;
+    width:130px;
+    height:130px;
 }
 
 #signup-btn {
@@ -53,7 +57,7 @@
     padding:10px;
     padding-left:20px;
     padding-right:20px;
-    background-color:rgb(223, 79, 79);
+    background-color: rgb(172, 50, 50);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
 }
@@ -101,9 +105,10 @@ form {
 
 
 
-#login-desc {
+#signup-desc {
     font-family: 'Roboto Slab', serif;
     font-size:45px;
+    
 }
 
 #signup-page  {
@@ -112,7 +117,7 @@ form {
 
 #signup-terms {
     text-align:left;
-    margin-left:20px;
+    max-width:370px;
 }
 
 #signup-btn {
@@ -124,13 +129,64 @@ form {
     box-shadow: 5px 5px 6px -4px #000000;
 }
 
+#signup-arrow {
+    text-align: center;
+    font-size:50px;
+    margin-top:80px;
+}
+
+.signup-bottom-container {
+    padding:50px;
+    margin-bottom:50px;
+}
+
+#signup-features-title {
+    font-family: 'Roboto Slab', serif;
+    font-size:45px;
+    text-align:center;
+}
+
+#signup-features-content {
+    font-size:20px;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    max-width:400px;
+    padding:10px;
+    background-color: rgb(223, 79, 79);
+    box-shadow: 5px 5px 6px -4px #000000;
+    
+}
+
+#signup-feature1-title,
+#signup-feature2-title,
+#signup-feature3-title {
+    text-align: center;
+}
+
+
+
+.signup-footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:white;
+    color: white;
+    text-align: center;
+}
+
+.signup-footer-row {
+    padding:10px;
+}
+
 
 
 /* ----------------- index.html ----------------- */
 
 /* ----------------- login.html ----------------- */
 
-#login-logo2 {
+#login-logo {
     height:350px;
 }
 
@@ -162,12 +218,83 @@ form {
 
 /* ----------------- login.html ----------------- */
 
+/* ----------------- selection.html ----------------- */
+
+#selection-page {
+    background-color: rgb(172, 50, 50);
+}
+
+.selection-logo {
+    height:350px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+
+#selection-title {
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:40px;
+    text-align: center;
+    
+}
+
+.selection-container1,
+.selection-container2 {
+    align-content:center;
+    padding:50px;
+}
+
+/* ----------------- selection.html ----------------- */
+
 /* ----------------- home.html ----------------- */
 
 #home-page {
     background-color: rgb(172, 50, 50);
+    
 }
 
 
 
 /* ----------------- home.html ----------------- */
+
+
+
+/* ----------------- policy.html ----------------- */
+
+
+#policy-page {
+    background-color: rgb(172, 50, 50);
+}
+
+#policy-content {
+    padding:30px;
+    color:white;
+}
+
+.previous {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    color: white;
+    font-size:25px;
+    margin-left:10px;
+}
+
+/* ----------------- policy.html ----------------- */
+
+/* ----------------- terms.html ----------------- */
+
+
+#terms-page {
+    background-color: rgb(172, 50, 50);
+}
+
+#terms-content {
+    padding:30px;
+    color:white;
+}
+
+
+
+/* ----------------- terms.html ----------------- */
