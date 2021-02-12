@@ -167,6 +167,15 @@ form {
     
 }
 
+.signup-feature1-col,
+.signup-feature2-col,
+.signup-feature3-col {
+    padding:10px;
+    background-color: rgb(223, 79, 79);
+    box-shadow: 5px 5px 6px -4px #000000;
+    
+}
+
 #signup-feature1-title,
 #signup-feature2-title,
 #signup-feature3-title {
