@@ -27,7 +27,7 @@
 
 .signup-top-container {
     box-shadow: 5px 5px 6px -4px #000000;
-    background-color:rgb(223, 79, 79);
+    background-color: rgb(172, 50, 50);
     margin-bottom:20px;
 }
 
@@ -57,11 +57,10 @@
     padding:10px;
     padding-left:20px;
     padding-right:20px;
-    background-color: rgb(172, 50, 50);
+    background-color:rgb(223, 79, 79);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
 }
-
 
 #signup-image {
     width:100%;
@@ -129,6 +128,15 @@ form {
     box-shadow: 5px 5px 6px -4px #000000;
 }
 
+#signup-btn:disabled {
+    width:90%;
+    border:0px;
+    padding:8px;
+    background-color:rgb(134, 31, 31);
+    color:white;
+    box-shadow: 5px 5px 6px -4px #000000;
+}
+
 #signup-arrow {
     text-align: center;
     font-size:50px;
@@ -180,7 +188,10 @@ form {
     padding:10px;
 }
 
-
+#terms-anchor,
+#policy-anchor {
+    color:white
+}
 
 /* ----------------- index.html ----------------- */
 
@@ -211,6 +222,16 @@ form {
     margin-top:0px;
     padding:8px;
     background-color:rgb(223, 79, 79);
+    color:white;
+    box-shadow: 5px 5px 6px -4px #000000;
+}
+
+#login-btn:disabled{
+    width:50%;
+    border:0px;
+    margin-top:0px;
+    padding:8px;
+    background-color:rgb(134, 31, 31);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
 }
@@ -279,6 +300,11 @@ form {
     color: white;
     font-size:25px;
     margin-left:10px;
+}
+
+.previous:hover {
+    color: white;
+
 }
 
 /* ----------------- policy.html ----------------- */
