@@ -257,6 +257,7 @@ form {
     font-family:Arial, Helvetica, sans-serif;
     font-size:40px;
     text-align: center;
+    margin-bottom:40px;
     
 }
 
@@ -266,20 +267,72 @@ form {
     padding:50px;
 }
 
-/* ----------------- selection.html ----------------- */
 
-/* ----------------- home.html ----------------- */
+.charmander-card,
+.bulbasaur-card,
+.squirtle-card,
+.pikachu-card {
+    box-shadow: 5px 5px 6px -4px #000000;
+}
 
-#home-page {
-    background-color: rgb(172, 50, 50);
-    
+.charmander-card,
+.bulbasaur-card,
+.squirtle-card,
+.pikachu-card {
+    box-shadow: 5px 5px 6px -4px #000000;
+}
+
+.charmander-card:hover,
+.bulbasaur-card:hover,
+.squirtle-card:hover,
+.pikachu-card:hover {
+    background-color:rgb(223, 79, 79);
 }
 
 
 
-/* ----------------- home.html ----------------- */
+.charmander-card:focus,
+.bulbasaur-card:focus,
+.squirtle-card:focus,
+.pikachu-card:focus {
+    background-color:rgb(223, 79, 79)
+}
 
 
+#select-btn {
+    border:0px;
+    padding:10px;
+    padding-left:20px;
+    padding-right:20px;
+    background-color:rgb(223, 79, 79);
+    color:white;
+    box-shadow: 5px 5px 6px -4px #000000;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    margin-top:100px;
+    width:60%
+}
+
+
+#select-btn:disabled {
+    border:0px;
+    padding:10px;
+    padding-left:20px;
+    padding-right:20px;
+    background-color:rgb(200, 69, 50);
+    color:white;
+    box-shadow: 5px 5px 6px -4px #000000;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    margin-top:100px;
+    width:60%
+}
+
+/* ----------------- selection.html ----------------- */
 
 /* ----------------- policy.html ----------------- */
 
@@ -323,4 +376,70 @@ form {
 
 
 
+
 /* ----------------- terms.html ----------------- */
+
+/* ----------------- home.html ----------------- */
+
+#home-page {
+    background-color: white
+    
+}
+
+#home-logo {
+    width:100px;
+    margin-left:-20px;
+}
+
+.navbar-custom { 
+    background-color: rgb(200, 69, 50);; 
+} 
+
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text { 
+    color: white; 
+    font-size:25px;
+    margin-left:-10px; 
+} 
+
+#navbar-tasks,
+#navbar-calendar,                 /* NavBar CSS is universal(for all pages) */
+#navbar-skill-tree {
+    color:white;
+    font-size:20px;
+    margin-left:40px;
+}
+
+.home-top-container {
+    background-color: rgb(172, 50, 50);
+}
+
+.home-middle-container {
+    padding:50px;
+}
+
+#home-daillies-title,
+#home-todo-title,
+#home-shop-title {
+    color:rgb(172, 50, 50);
+    
+}
+
+#home-daily-add,
+#home-todo-add,
+#home-shop-add {
+    background-color:grey;
+    padding:8px;
+    border:0px;
+}
+
+.home-daily-column,
+.home-todo-column,
+.home-shop-column {
+    border:darkgrey 5px solid;
+    
+}
+
+
+
+/* ----------------- home.html ----------------- */
