@@ -18,13 +18,13 @@ $(document).ready(function () {
             }
         }
         $.ajax(settings).done(function (response) {
-            console.log("Checking for user");
-            console.log(response);
+            //console.log("Checking for user");
+            //console.log(response);
             if(jQuery.isEmptyObject(response)){
-                console.log("No exisitng user found, proceed");
+                //console.log("No exisitng user found, proceed");
                 $("#signup-btn"). attr("disabled", false);
             }else{
-                console.log("Exisitng user found")
+                //console.log("Exisitng user found")
                 alert("Existing user found!")
                 $("#signup-form").trigger("reset");
                 $("#signup-btn"). attr("disabled", true);
@@ -79,10 +79,12 @@ $(document).ready(function () {
             }
             
             $.ajax(settings).done(function (response) {
-                console.log("Creating new user");            
+                //console.log(response);
+                //console.log("Creating new user");            
                 sessionStorage.setItem("username",signupUsername)
                 sessionStorage.setItem("password",signupPassword)  
-                window.location.href = "home.html";       
+                sessionStorage.setItem("id",response._id)
+                window.location.href = "selection.html";       
             });                       
         }else{
             alert("Wrong input!");
@@ -147,13 +149,25 @@ $(document).ready(function () {
                 }
             }
             $.ajax(settings).done(function (response) {
-                console.log(response);
-                sessionStorage.setItem("username",loginUsername)
-                sessionStorage.setItem("password",loginPassword)  
+                //console.log(response);
+                sessionStorage.setItem("username",loginUsername);
+                sessionStorage.setItem("password",loginPassword);
+                sessionStorage.setItem("id",response[0]._id);
+                sessionStorage.setItem("avatar_img_url",response[0].avatar_img_url);
                 window.location.href = "home.html";       
             });
         }else{
             alert("Wrong input!");
         }
     });
+    
+    //Home Page
+    let avatar_img_url = sessionStorage.getItem("avatar_img_url");
+    $("#home-starter-pic").attr("src",avatar_img_url);
+
+    $("#home-daily-add").keypress(function(event) { 
+        if (event.keyCode === 13) { 
+           
+        } 
+    }); 
 });
