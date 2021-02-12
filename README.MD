@@ -15,9 +15,9 @@ PokePlanner allows users to track their habits and set goals for themselves all 
 
 <h2>Design Process</h2>
 
-We utilized Adobe XD to plan out a wireframe at first as we felt it was important to communicate our ideas and concepts with each other even though a wireframe submission is not required this time around. 
+<p>We utilized Adobe XD to plan out a wireframe at first as we felt it was important to communicate our ideas and concepts with each other even though a wireframe submission is not required this time around.</p>
 
-
+<p>
 
 
 <h2>Features</h2>
@@ -74,18 +74,17 @@ We intend to allow users to pick their character/avatar from 4 initial pokemon f
 
 <h3>Media</h3>
 
-
+* Pokemon Image(index.html) - https://www.pngegg.com/en/png-wnowr/download
 
 
 <h2>Links</h2>
 
 * FreePrivacyPolicy - https://app.freeprivacypolicy.com/
-
+* GoogleFonts(Roboto) - https://fonts.google.com/specimen/Roboto?query=roboto&sidebar.open=true&selection.family=Roboto<br>
+* CSS Box Shadow Generator - https://html-css-js.com/css/generator/box-shadow/
 
 <h2>Acknowledgements</h2>
 
+<p>PokePlanner was inspired by Habitica - https://habitica.com/</p>
 
-Sources
-https://www.pngegg.com/en/png-wnowr/download
-https://fonts.google.com/specimen/Roboto?query=roboto&sidebar.open=true&selection.family=Roboto
-https://html-css-js.com/css/generator/box-shadow/
+
