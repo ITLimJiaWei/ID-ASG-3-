@@ -188,16 +188,16 @@ form {
     padding:10px;
 }
 
-#footer-desc-title {
-    color:rgb(223, 79, 79);
-}
+
 
 #terms-anchor,
 #policy-anchor {
     color:white;
 }
 
-
+#footer-desc-title {
+    color:rgb(223, 79, 79);
+}
 
 #footer-terms-title,
 #footer-policy-title,
@@ -464,6 +464,31 @@ form {
     
 }
 
+.home-footer {
+    background-color:rgb(172, 50, 50);
+}
+
+#home-footer-terms-title,
+#home-footer-policy-title,
+#home-footer-terms-content,
+#home-footer-policy-content {
+    color: white
+}
+
+#home-footer-contact-title,
+#home-footer-contact-1,
+#home-footer-contact-2 {
+    color:white;
+}
+
+#home-footer-copyright {
+    color:white;
+    text-align:center;
+}
+
+#home-footer-desc-title {
+    color:white;
+}
 
 
 /* ----------------- home.html ----------------- */
