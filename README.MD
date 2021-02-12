@@ -3,11 +3,11 @@
 Names: Lim Jia Wei, Chua Dong En<br>
 Class: P01<br>
 IDs: S10204971, S10202623 <br>
-Website URL: <br>
+Website URL: https://itlimjiawei.github.io/ID-ASG-3-/<br>
 
 <h2>Description</h2>
 
-PokePlanner 
+PokePlanner allows users to track their habits and set goals for themselves all while having fun. This is done by gamifying the concept using images and data from PokeAPI as a vast amount of people recognize and find Pocket Monsters entertaining.
 
 
 
@@ -15,7 +15,7 @@ PokePlanner
 
 <h2>Design Process</h2>
 
-
+We utilized Adobe XD to plan out a wireframe at first as we felt it was important to communicate our ideas and concepts with each other even though a wireframe submission is not required this time around. 
 
 
 
@@ -74,10 +74,12 @@ We intend to allow users to pick their character/avatar from 4 initial pokemon f
 
 <h3>Media</h3>
 
-* FreePrivacyPolicy - https://app.freeprivacypolicy.com/
+
 
 
 <h2>Links</h2>
+
+* FreePrivacyPolicy - https://app.freeprivacypolicy.com/
 
 
 <h2>Acknowledgements</h2>
