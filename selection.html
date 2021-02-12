@@ -17,61 +17,36 @@
   <body id = "selection-page">
 
     <img src="pictures/logo_transparent.png" class="selection-logo">
-    <h2 id="selection-title"> Select your character!</h2>
+    <h2 id="selection-title"> Choose your starter!</h2>
 
-    <div class="container-fluid selection-container1">
-        <div class="row">
-          <div class="col-6 ">
-            <div class="card" style="width: 20rem;">
-                <img " class="card-img-top" alt="Charmander Picture" id="charmander">
-                <div class="card-body">
-                  <p class="card-text">
-                      Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-          </div>
-          
-          <div class="col-6">
-            <div class="card" style="width: 20rem;">
-                <img  class="card-img-top" alt="Bulbasaur Picture" id="bulbasaur">
-                <div class="card-body">
-                  <p class="card-text">
-                      Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>   
-        </div>
+    <div class="card-deck">
+      <div class="card text-center charmander-card">
+        <img class="card-img-top" alt="Charmander Picture" id="charmander">
+        <div class="card-body">
+          <h5 class="card-title">Charmander</h5>   
         </div>
       </div>
-
-      <div class="container-fluid selection-container2">
-        <div class="row">
-          <div class="col-6">
-            <div class="card" style="width: 20rem;">
-                <img  class="card-img-top" alt="Squirtle Picture" id="squirtle"> 
-                <div class="card-body">
-                  <p class="card-text">
-                      Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-          </div>
-          
-          <div class="col-6">
-            
-              <div class="card" style="width: 20rem;">
-                <img  class="card-img-top" alt="Pikachu Picture" id="pikachu">
-                <div class="card-body">
-                  <p class="card-text">
-                      Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>        
-                     
-        </div>
+      <div class="card text-center bulbasaur-card">
+        <img class="card-img-top" alt="Bulbasaur Picture" id="bulbasaur">
+        <div class="card-body">
+          <h5 class="card-title">Bulbasaur</h5>
         </div>
       </div>
+      <div class="card text-center squirtle-card">
+        <img class="card-img-top" alt="Squirtle Picture" id="squirtle">
+        <div class="card-body">
+          <h5 class="card-title">Squirtle</h5>
+        </div>
+      </div>
+      <div class="card text-center pikachu-card">
+        <img class="card-img-top" alt="Pikachu Picture" id="pikachu">
+        <div class="card-body">
+          <h5 class="card-title">Pikachu</h5>
+        </div>
+      </div>
+    </div>
     
-
-    
-    
+    <input type="submit" id="select-btn" value="Select" disabled></input>
     
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
