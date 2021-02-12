@@ -188,9 +188,13 @@ form {
     padding:10px;
 }
 
+#footer-desc-title {
+    color:rgb(223, 79, 79);
+}
+
 #terms-anchor,
 #policy-anchor {
-    color:white
+    color:white;
 }
 
 
@@ -206,6 +210,11 @@ form {
 #footer-contact-1,
 #footer-contact-2 {
     color:rgb(223, 79, 79);
+}
+
+#footer-copyright {
+    color:rgb(223, 79, 79);
+    text-align:center;
 }
 
 /* ----------------- index.html ----------------- */
