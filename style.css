@@ -171,9 +171,6 @@ form {
 .signup-feature2-col,
 .signup-feature3-col {
     padding:10px;
-    background-color: rgb(223, 79, 79);
-    box-shadow: 5px 5px 6px -4px #000000;
-    
 }
 
 #signup-feature1-title,
@@ -196,7 +193,6 @@ form {
 .signup-footer-row {
     padding:10px;
 }
-
 
 
 #terms-anchor,
@@ -315,21 +311,10 @@ form {
     box-shadow: 5px 5px 6px -4px #000000;
 }
 
-.charmander-card:hover,
-.bulbasaur-card:hover,
-.squirtle-card:hover,
-.pikachu-card:hover {
-    background-color:rgb(223, 79, 79);
-}
-
-
-
-.charmander-card:focus,
-.bulbasaur-card:focus,
-.squirtle-card:focus,
-.pikachu-card:focus {
+.card:hover {
     background-color:rgb(223, 79, 79)
 }
+
 
 .selected{
     background-color:rgb(223, 79, 79)   !important
@@ -420,7 +405,6 @@ form {
 
 #home-page {
     background-color: white
-    
 }
 
 #home-logo {
@@ -468,17 +452,23 @@ form {
     background-color:grey;
     padding:8px;
     border:0px;
+    width:100%;
 }
 
 .home-daily-column,
 .home-todo-column,
 .home-shop-column {
-    border:darkgrey 5px solid;
+    background-color: darkgrey;
+    padding:10px;
+    min-height:500%;
     
 }
 
 .home-footer {
     background-color:rgb(172, 50, 50);
+    position: fixed;
+    bottom: 0;
+    
 }
 
 #home-footer-terms-title,
@@ -503,5 +493,59 @@ form {
     color:white;
 }
 
+#home-starter-pic {
+    background-color:rgb(243, 119, 99);
+    margin:10px;
+    border-radius:30px;
+}
+
+#home-username {
+    color:white;
+    font-size:20px;
+    margin-top:10px;
+}
+
+.hp-bar {
+    width:100%;
+    margin-top:15%;
+}
+
+.xp-bar {
+    width:100%; 
+    margin-top:15%
+}
+
+#hp-number {
+    padding-top:100%;
+    color:white;
+    font-size:20px;
+}
+
+#xp-number {
+    margin-top:40%;
+    color:white;
+    font-size:20px;
+}
+
+.flex-container {
+    display:flex;
+    flex-direction:row;
+    margin-top:5%;
+}
+
+.flex-item1 {
+    padding:4%;
+    background-color: rgb(197, 63, 63);
+}
+
+.flex-item2 {
+    padding:4%;
+    background-color: rgb(226, 58, 58);
+    width:90%;
+}
+
+input.checkbox {
+    zoom: 2;
+}
 
 /* ----------------- home.html ----------------- */
