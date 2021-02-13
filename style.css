@@ -439,35 +439,30 @@ form {
     padding:50px;
 }
 
-#home-daillies-title,
-#home-todo-title,
-#home-shop-title {
+.home-title {
     color:rgb(172, 50, 50);
     
 }
 
-#home-daily-add,
-#home-todo-add,
-#home-shop-add {
+.home-add {
     background-color:grey;
     padding:8px;
     border:0px;
     width:100%;
 }
 
-.home-daily-column,
-.home-todo-column,
-.home-shop-column {
+.home-column {
     background-color: darkgrey;
     padding:10px;
-    min-height:500%;
+    min-height:200%;
     
 }
 
 .home-footer {
     background-color:rgb(172, 50, 50);
-    position: fixed;
+    position: absolute;
     bottom: 0;
+    width:100%;
     
 }
 
