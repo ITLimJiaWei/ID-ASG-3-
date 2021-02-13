@@ -204,10 +204,8 @@ form {
     color:rgb(223, 79, 79);
 }
 
-#footer-terms-title,
-#footer-policy-title,
-#footer-terms-content,
-#footer-policy-content {
+#footer-title,
+#footer-content {
     color: rgb(223, 79, 79);
 }
 
@@ -466,11 +464,9 @@ form {
     
 }
 
-#home-footer-terms-title,
-#home-footer-policy-title,
-#home-footer-terms-content,
-#home-footer-policy-content {
-    color: white
+.home-footer-title,
+.home-footer-content {
+    color: white;
 }
 
 #home-footer-contact-title,
