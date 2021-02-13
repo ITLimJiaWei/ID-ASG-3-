@@ -455,9 +455,9 @@ form {
     width:100%;
 }
 
-.home-daily-column,
-.home-todo-column,
-.home-shop-column {
+#home-daily-column,
+#home-todo-column,
+#home-shop-column {
     background-color: darkgrey;
     padding:10px;
     min-height:500%;
