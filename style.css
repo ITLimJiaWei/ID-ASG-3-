@@ -439,7 +439,6 @@ form {
 
 .home-title {
     color:rgb(172, 50, 50);
-    
 }
 
 .home-add {
@@ -480,7 +479,7 @@ form {
     text-align:center;
 }
 
-#home-footer-desc-title {
+.home-footer-desc-title {
     color:white;
 }
 
