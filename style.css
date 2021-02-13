@@ -544,8 +544,17 @@ form {
     width:90%;
 }
 
+.flex-item3 {
+    background-color: rgb(226, 58, 58);
+    padding:3%;
+    padding-top:4%;
+    
+}
+
 input.checkbox {
     zoom: 2;
 }
+
+
 
 /* ----------------- home.html ----------------- */
