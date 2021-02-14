@@ -574,17 +574,14 @@ input.checkbox {
     max-height:20%;
 }
 
-.home-footer-content {
+.home-footer-content,
+.home-footer-desc-title  {
     color: white;
 }
 
 #home-footer-copyright {
     color:white;
     text-align:center;
-}
-
-.home-footer-desc-title {
-    color:white;
 }
 
 .home-footer-row {
