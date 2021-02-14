@@ -533,16 +533,16 @@ form {
 .flex-container {
     display:flex;
     flex-direction:row;
-    margin-top:5%;
+    margin-top:2%;
 }
 
 .flex-item1 {
-    padding:4%;
+    padding:3%;
     background-color: rgb(197, 63, 63);
 }
 
 .flex-item2 {
-    padding:4%;
+    padding:3%;
     background-color: rgb(226, 58, 58);
     width:90%;
     color:white;
@@ -552,8 +552,15 @@ form {
 .flex-item3 {
     background-color: rgb(226, 58, 58);
     padding:3%;
-    padding-top:4%;
+    padding-top:3%;
     
+}
+
+.home-info {
+    margin-top:60%;
+    text-align: center;
+    font-size:0.5vw;
+    position:relative;
 }
 
 input.checkbox {
@@ -582,6 +589,11 @@ input.checkbox {
 
 .home-footer-row {
     padding:10px;
+}
+
+.home-footer-anchor,
+.home-footer-anchor:hover {
+    color:white;
 }
 
 
