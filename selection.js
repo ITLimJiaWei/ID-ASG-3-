@@ -67,3 +67,18 @@ $(document).ready(function () {
     });
   });
 });
+
+//GET request for nugget(to be implemeneted) ?? TBC
+
+// var settings = {
+//   "url": "https://pokeapi.co/api/v2/item/nugget/",
+//   "method": "GET",
+//   "timeout": 0,
+//   "headers": {
+//     "Cookie": "__cfduid=d75a766d734b3a895b3a683d8dd6f587e1613275356"
+//   },
+// };
+
+// $.ajax(settings).done(function (response) {
+//   console.log(response);
+// });
