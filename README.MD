@@ -9,7 +9,12 @@ Website URL: https://itlimjiawei.github.io/ID-ASG-3-/<br>
 
 PokePlanner allows users to track their habits and set goals for themselves all while having fun. This is done by gamifying the concept using images and data from PokeAPI as a vast amount of people recognize and find Pocket Monsters entertaining.
 
+<h2>Update Table</h2>
 
+Date        | Description                                             | Status
+----------- | ------------------------------------------------------  | ------
+13/2/2021   | Finished selection.html and login.html                  |  Done 
+ 
 
 
 
