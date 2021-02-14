@@ -1,3 +1,38 @@
+/* ----------------- Universal CSS ----------------- */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+
+.navbar-custom { 
+    background-color: rgb(200, 69, 50);; 
+} 
+
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text { 
+    color: white; 
+    font-size:25px;
+    margin-left:-10px; 
+} 
+
+#navbar-tasks,
+#navbar-calendar,                 /* NavBar CSS is universal(for all pages) */
+#navbar-skill-tree {
+    color:white;
+    font-size:20px;
+    margin-left:40px;
+}
+
+/* ----------------- Universal CSS ----------------- */
+
 /* ----------------- index.html ----------------- */
 
 #signup-page {
@@ -410,25 +445,6 @@ form {
     margin-left:-20px;
 }
 
-.navbar-custom { 
-    background-color: rgb(200, 69, 50);; 
-} 
-
-.navbar-custom .navbar-brand, 
-.navbar-custom .navbar-text { 
-    color: white; 
-    font-size:25px;
-    margin-left:-10px; 
-} 
-
-#navbar-tasks,
-#navbar-calendar,                 /* NavBar CSS is universal(for all pages) */
-#navbar-skill-tree {
-    color:white;
-    font-size:20px;
-    margin-left:40px;
-}
-
 .home-top-container {
     background-color: rgb(172, 50, 50);
 }
@@ -440,37 +456,45 @@ form {
 
 #home-starter-pic {
     background-color:rgb(243, 119, 99);
-    margin:10px;
-    border-radius:30px;
-    width:100%;
+    margin:10%;
+    border-radius:8px;
 }
 
 #home-username {
     color:white;
-    font-size:20px;
-    margin-top:10px;
+    font-size:1.5vw;
+    margin-top:10%;
+}
+
+.home-top-col2 {
+    margin-left:2%;
+}
+
+#top-flex-container {
+    display:flex;
+    flex-direction: row;
 }
 
 .hp-bar,
 .xp-bar {
     width:100%;
-    margin-top:15%;
+    margin-top:3%;
 }
 
-#hp-number {
-    padding-top:100%;
-    color:white;
-    font-size:20px;
-}
-
+#hp-number,
 #xp-number {
-    margin-top:40%;
     color:white;
     font-size:20px;
+    
 }
 
 .home-middle-container {
     padding:50px;
+    height:80%;
+}
+
+.home-middle-row {
+    height:85%;
 }
 
 .home-title {
@@ -482,13 +506,14 @@ form {
     padding:8px;
     border:0px;
     width:100%;
+    color:white;
 }
 
 .home-column {
     background-color: darkgrey;
     padding:10px;
-    min-height:200%;
-    
+    height:100%;
+    width:100%;
 }
 
 .flex-container {
@@ -506,6 +531,8 @@ form {
     padding:4%;
     background-color: rgb(226, 58, 58);
     width:90%;
+    color:white;
+    font-size:20px;
 }
 
 .flex-item3 {
@@ -516,13 +543,14 @@ form {
 }
 
 input.checkbox {
-    zoom: 2;
+    zoom: 2.5;
 }
 
 .home-footer {
     background-color:rgb(172, 50, 50);
     position: absolute;
     bottom: 0;
+    max-height:20%;
 }
 
 .home-footer-content {
@@ -541,6 +569,8 @@ input.checkbox {
 .home-footer-row {
     padding:10px;
 }
+
+
 
 
 
