@@ -433,6 +433,42 @@ form {
     background-color: rgb(172, 50, 50);
 }
 
+.home-top-row {
+    background-color: rgb(172, 50, 50);
+    width:50%;
+}
+
+#home-starter-pic {
+    background-color:rgb(243, 119, 99);
+    margin:10px;
+    border-radius:30px;
+    width:100%;
+}
+
+#home-username {
+    color:white;
+    font-size:20px;
+    margin-top:10px;
+}
+
+.hp-bar,
+.xp-bar {
+    width:100%;
+    margin-top:15%;
+}
+
+#hp-number {
+    padding-top:100%;
+    color:white;
+    font-size:20px;
+}
+
+#xp-number {
+    margin-top:40%;
+    color:white;
+    font-size:20px;
+}
+
 .home-middle-container {
     padding:50px;
 }
@@ -453,68 +489,6 @@ form {
     padding:10px;
     min-height:200%;
     
-}
-
-.home-footer {
-    background-color:rgb(172, 50, 50);
-    position: absolute;
-    bottom: 0;
-    width:100%;
-    
-}
-
-.home-footer-title,
-.home-footer-content {
-    color: white;
-}
-
-#home-footer-contact-title,
-#home-footer-contact-1,
-#home-footer-contact-2 {
-    color:white;
-}
-
-#home-footer-copyright {
-    color:white;
-    text-align:center;
-}
-
-.home-footer-desc-title {
-    color:white;
-}
-
-#home-starter-pic {
-    background-color:rgb(243, 119, 99);
-    margin:10px;
-    border-radius:30px;
-}
-
-#home-username {
-    color:white;
-    font-size:20px;
-    margin-top:10px;
-}
-
-.hp-bar {
-    width:100%;
-    margin-top:15%;
-}
-
-.xp-bar {
-    width:100%; 
-    margin-top:15%
-}
-
-#hp-number {
-    padding-top:100%;
-    color:white;
-    font-size:20px;
-}
-
-#xp-number {
-    margin-top:40%;
-    color:white;
-    font-size:20px;
 }
 
 .flex-container {
@@ -544,6 +518,30 @@ form {
 input.checkbox {
     zoom: 2;
 }
+
+.home-footer {
+    background-color:rgb(172, 50, 50);
+    position: absolute;
+    bottom: 0;
+}
+
+.home-footer-content {
+    color: white;
+}
+
+#home-footer-copyright {
+    color:white;
+    text-align:center;
+}
+
+.home-footer-desc-title {
+    color:white;
+}
+
+.home-footer-row {
+    padding:10px;
+}
+
 
 
 
