@@ -201,6 +201,17 @@ form {
     text-align: center;
 }
 
+.signup-feature-flexbox {
+    display:flex;
+    flex-direction:column;
+}
+
+.signup-feature-pic {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+
 .signup-feature-content {
     color:white;
     width:60%;
@@ -236,6 +247,8 @@ form {
     color:rgb(223, 79, 79);
     text-align:center;
 }
+
+
 
 /* ----------------- index.html ----------------- */
 
