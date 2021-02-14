@@ -2,13 +2,14 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+  margin:0;
+  padding:0;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
+    height:100%;
+    width:100%;
+    overflow-x: hidden; 
   }
 
 
@@ -48,17 +49,6 @@ body {
     
 }
 
-#login-page{
-    background-color: rgb(172, 50, 50);
-    position: relative;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    margin: 0px;
-}
 
 .signup-top-container {
     box-shadow: 5px 5px 6px -4px #000000;
@@ -69,6 +59,11 @@ body {
 .logo {
     width:130px;
     height:130px;
+}
+
+.signup-anchor,
+.signup-anchor:hover {
+    color:white;
 }
 
 #signup-btn {
@@ -99,7 +94,7 @@ body {
 
 #signup-image {
     width:100%;
-    height:260px;
+    height:20vw;
 }
 
 .signup-picture-container {
@@ -108,8 +103,6 @@ body {
     margin-right:0px;
     margin-left:0px;
 }
-
-
 
 #signup-username,
 #signup-password,
@@ -137,12 +130,9 @@ form {
     margin-bottom:-40px;
 }
 
-
-
 #signup-desc {
     font-family: 'Roboto Slab', serif;
     font-size:45px;
-    
 }
 
 #signup-page  {
@@ -195,25 +185,28 @@ form {
     margin-left: auto;
     margin-right: auto;
     display:block;
-    max-width:400px;
+    max-width:30vw;
     padding:10px;
     background-color: rgb(223, 79, 79);
     box-shadow: 5px 5px 6px -4px #000000;
     
 }
 
-.signup-feature1-col,
-.signup-feature2-col,
-.signup-feature3-col {
+.signup-feature-col {
     padding:10px;
-}
-
-#signup-feature1-title,
-#signup-feature2-title,
-#signup-feature3-title {
     text-align: center;
 }
 
+.signup-feature-title {
+    text-align: center;
+}
+
+.signup-feature-content {
+    color:white;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 .signup-footer {
@@ -227,27 +220,16 @@ form {
 
 .signup-footer-row {
     padding:10px;
+    width: 100%;
 }
 
-
-#terms-anchor,
-#policy-anchor {
-    color:white;
-}
-
-#footer-desc-title {
+.footer-anchor,
+.footer-anchor:hover {
     color:rgb(223, 79, 79);
 }
 
-#footer-title,
-#footer-content {
+.footer-content {
     color: rgb(223, 79, 79);
-}
-
-#footer-contact-title,
-#footer-contact-1,
-#footer-contact-2 {
-    color:rgb(223, 79, 79);
 }
 
 #footer-copyright {
@@ -258,6 +240,19 @@ form {
 /* ----------------- index.html ----------------- */
 
 /* ----------------- login.html ----------------- */
+
+
+#login-page{
+    background-color: rgb(172, 50, 50);
+    position: relative;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+}
 
 #login-logo {
     height:350px;
@@ -490,11 +485,11 @@ form {
 
 .home-middle-container {
     padding:50px;
-    height:80%;
+    height:70%;
 }
 
 .home-middle-row {
-    height:85%;
+    height:70%;
 }
 
 .home-title {
