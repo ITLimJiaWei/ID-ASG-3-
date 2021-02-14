@@ -50,6 +50,10 @@ $(document).ready(function () {
 
         if (validInput){
             let currentDate = new Date();
+            let ystdDate = new Date();
+            ystdDate.setDate(ystdDate.getDate()-1);
+            let tmrwDate  = new Date();
+            tmrwDate.setDate(tmrwDate.getDate()+1);
             let jsondata = {
                 "username": signupUsername,
                 "password":signupPassword,
@@ -57,8 +61,8 @@ $(document).ready(function () {
                 "experience":0,
                 "health":50,
                 "coins":0,
-                "dailies":'{"Workout":["'+currentDate+'",1],"Homework":["'+currentDate+'",1]}',
-                "todo":'{"Assignment":[2359]}',
+                "dailies":'{"Daily Ystd":"'+ystdDate+'","Daily Tdy":"'+currentDate+'","Daily Tmrw":"'+tmrwDate+'"}',
+                "todo":'{"Todo Ystd":"'+ystdDate+'","Todo Tdy":"'+currentDate+'","Todo Tmrw":"'+tmrwDate+'"}',
                 "shop":'{"shop1":[2359]}',
                 "maxhealth":50,
                 "maxexperience":50
@@ -190,6 +194,9 @@ $(document).ready(function () {
     let username = sessionStorage.getItem("username");
     $("#home-username").text(username);
 
+    let coins = sessionStorage.getItem("coins");
+    $("#nugget-count").text(coins);
+
     let health = sessionStorage.getItem("health");
     let maxhealth = sessionStorage.getItem("maxhealth");
     $("#hp-number").text(health+"/"+maxhealth);
@@ -206,10 +213,36 @@ $(document).ready(function () {
     let todos =  JSON.parse(sessionStorage.getItem("todo"));
     let shop = JSON.parse(sessionStorage.getItem("shop"));
 
+    function beforeToday(taskDate){
+        let currentDate = new Date();
+        currentDate.setHours(0,0,0,0);
+        taskDate.setHours(0,0,0,0);
+        if(taskDate<currentDate){
+            return 1;
+        }else if(taskDate.getTime()==currentDate.getTime()){
+            return 0;           
+        }else{
+            return -1;
+        }
+    }
+
     function updateDailies(){
         $("#home-daily-column>div").remove();
         for (var daily in dailies) {
-            $("#home-daily-column").append('<div class="flex-container"><div class="flex-item1"><input type="checkbox" class="checkbox" data-item="'+daily+'"></div><div class="flex-item2">'+daily+'</div><div class="flex-item3"><button type="button" class="btn btn-light btn-sm delete-button" data-item="'+daily+'">Delete</button></div></div>')        
+            let currentDate = new Date();
+            let utcDate = dailies[daily];    //convert utc date to local date due to JSON.stringify auto conversion
+            let localDate = new Date(utcDate);
+            dailies[daily] = localDate;
+            let check =  beforeToday(localDate);
+            if (check==1){  //task expired, penalty
+                alert("You didn't do " + daily);    //some penalty
+                dailies[daily] = currentDate; //update date
+                $("#home-daily-column").append('<div class="flex-container"><div class="flex-item1"><input type="checkbox" class="checkbox" data-item="'+daily+'"></div><div class="flex-item2">'+daily+'</div><div class="flex-item3"><button type="button" class="btn btn-light btn-sm delete-button" data-item="'+daily+'">Delete</button></div></div>');
+            }else if (check ==0){ //due today
+                $("#home-daily-column").append('<div class="flex-container"><div class="flex-item1"><input type="checkbox" class="checkbox" data-item="'+daily+'"></div><div class="flex-item2">'+daily+'</div><div class="flex-item3"><button type="button" class="btn btn-light btn-sm delete-button" data-item="'+daily+'">Delete</button></div></div>');
+            }else{  //due in future
+                //do nothing
+            }
         }
         sessionStorage.setItem("dailies",JSON.stringify(dailies));
             let id = sessionStorage.getItem("id");
@@ -234,7 +267,18 @@ $(document).ready(function () {
     function updateTodo(){
         $("#home-todo-column>div").remove();
         for (var todo in todos) {
-            $("#home-todo-column").append('<div class="flex-container"><div class="flex-item1"><input type="checkbox" class="checkbox" data-item="'+todo+'"></div><div class="flex-item2">'+todo+'</div><div class="flex-item3"><button type="button" class="btn btn-light btn-sm delete-button" data-item="'+todo+'">Delete</button></div></div>')        
+            let utcDate = todos[todo];
+            let localDate = new Date(utcDate); //convert utc date to local date due to JSON.stringify auto conversion
+            todos[todo] = localDate;
+            let check =  beforeToday(localDate);
+            if (check==1){  //task expired, penalty
+                alert("You didn't do " + todo);    //some penalty
+                delete todos[todo];
+            }else if (check ==0){ //due today
+                $("#home-todo-column").append('<div class="flex-container"><div class="flex-item1"><input type="checkbox" class="checkbox" data-item="'+todo+'"></div><div class="flex-item2">'+todo+'</div><div class="flex-item3"><button type="button" class="btn btn-light btn-sm delete-button" data-item="'+todo+'">Delete</button></div></div>');      
+            }else{  //due in future
+                $("#home-todo-column").append('<div class="flex-container"><div class="flex-item1"><input type="checkbox" class="checkbox" data-item="'+todo+'"></div><div class="flex-item2">'+todo+'</div><div class="flex-item3"><button type="button" class="btn btn-light btn-sm delete-button" data-item="'+todo+'">Delete</button></div></div>');      
+            }
         }
         sessionStorage.setItem("todo",JSON.stringify(todos));
             let id = sessionStorage.getItem("id");
@@ -289,7 +333,8 @@ $(document).ready(function () {
     $("#home-daily-add").keypress(function(event) { 
         if (event.keyCode === 13) { 
             let daily = $("#home-daily-add").val();
-            dailies[daily] = [2359];
+            let currentDate = new Date();
+            dailies[daily] = currentDate;
             updateDailies();
             $("#home-daily-add").val('');
             $(':focus').blur()            
@@ -299,8 +344,10 @@ $(document).ready(function () {
     
     $("#home-todo-add").keypress(function(event) { 
         if (event.keyCode === 13) { 
-           let todo = $("#home-todo-add").val();
-           todos[todo] = [2359];
+           let value = $("#home-todo-add").val();
+           let todo = value.split(",");
+           let dueDate = Date.parse(todo[1]);
+           todos[todo[0]] = dueDate;
            updateTodo();
            $("#home-todo-add").val('');
            $(':focus').blur()          
@@ -323,8 +370,12 @@ $(document).ready(function () {
         let item = $(e.target).data("item");  
         let currentDate = new Date();
         if(e.target.checked) {     
-            if(parentid =="home-daily-column"){      
-                dailies[item] = [currentDate,1];
+            if(parentid =="home-daily-column"){   
+                let tmrwDate  = new Date();
+                tmrwDate.setDate(tmrwDate.getDate()+1);   
+                dailies[item] = tmrwDate;
+                console.log($(e.target).parent().parent());
+                $(e.target).parent().parent().remove();
                 updateDailies();    //json stringify converts time to utc
             }
             else if (parentid =="home-todo-column"){
