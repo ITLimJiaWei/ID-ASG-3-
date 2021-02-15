@@ -66,7 +66,7 @@
 
           <div id="top-flex-container">
             <div class="progress hp-bar">
-              <div class="progress-bar bg-danger" role="progressbar" style="width: 70%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <div id="hp-number">
               48/50
@@ -76,7 +76,7 @@
           <div id="top-flex-container"> 
 
             <div class="progress xp-bar">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <div id="xp-number">
               10/50
@@ -105,9 +105,21 @@
                 
               </div>
               <div class="flex-item3">
-                <button type="button" class="btn btn-light btn-sm delete-button">Delete</button>
+                <div class="btn-group">
+                  
+                  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">   <!-- EDITED Daillies Task -->
+
+                  <button type="button" class="btn btn-light btn-sm delete-button dropdown-item">Delete</button>
+                  </div>
+                </div>
+                
               </div>
             </div>
+
+            
 
 
             <!-- <div class="flex-container">
@@ -136,9 +148,10 @@
           <div id="home-todo-column" class="home-column">
             <input type="text" id="home-todo-add" class="home-add" placeholder="Add a To Do (Assignment,yyyy-mm-dd)" required><br>
 
-            
 
-            
+            <!-- EDITED To Do Task -->
+
+
             <p class="home-info">These are your To Do's <br>Example: Assignment,yyyy-mm-dd</p> 
             
           </div>
@@ -151,20 +164,115 @@
           <h2 class="home-title">Shop</h2>
           <div id="home-shop-column" class="home-column">
             <input type="text" id="home-shop-add" class="home-add" placeholder="Add a reward" required><br>
-            <!-- <div class="flex-container">
+            <div class="flex-container">
               <div class="flex-item1">
                 <input type="checkbox" class="checkbox">
               </div>
               <div class="flex-item2">
                 TEST
               </div>
-              <div class="flex-item2">
-                TEST
+              <div class="flex-item3">
+                 <div class="flex-container">       <!-- EDITED SHOP REWARD -->
+                  <div id="nugget-count">
+                    75
+                  </div>
+                  <img src="pictures/nugget.png" alt="PokePlanner Currency Icon"> 
+                </div>
               </div>
               <div class="flex-item3">
-                <button type="button" class="btn btn-light btn-sm delete-button">Delete</button>
+                <div class="dropdown-menu">
+                  
+                  <button type="button" class="btn btn-light btn-sm delete-button dropdown-item">Delete</button>
+                  </div>
               </div>
-            </div> -->
+            </div>
+
+
+
+            <div class="container-fluid shop-container">
+              <div class="row">
+                <div class="card-deck">
+                  <div class="card">
+                    <img class="card-img-top"  alt="shop reward picture">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top"  alt="shop reward picture">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top"  alt="shop reward picture">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top"  alt="shop reward picture">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top"  alt="shop reward picture">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid shop-container">
+              <div class="row">
+                <div class="card-deck">
+                  <div class="card">
+                    <img class="card-img-top"  alt="shop reward picture">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top"  alt="shop reward picture">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top"  alt="shop reward picture">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top"  alt="shop reward picture">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top"  alt="shop reward picture">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
           </div>
           
@@ -216,8 +324,9 @@
 
     
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>
 
