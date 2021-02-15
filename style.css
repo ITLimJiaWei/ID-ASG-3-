@@ -5,7 +5,7 @@ body {
   margin:0;
   padding:0;
   height:100%;
-width:100%;
+  width:100%;
 }
 
 body {
@@ -521,7 +521,7 @@ form {
     background-color: darkgrey;
     padding:10px;
     height:100%;
-    width:100%;
+    
 }
 
 .flex-container {
@@ -573,9 +573,9 @@ input.checkbox {
 
 .home-footer {
     background-color:rgb(172, 50, 50);
-    position: absolute;
+    position: fixed; 
     /* Dong En added this line  */
-    position:  relative;    
+      
     bottom: 0;
     max-height:20%;
 }
@@ -602,6 +602,58 @@ input.checkbox {
 
 
 
-
-
 /* ----------------- home.html ----------------- */
+
+/* ----------------- calendar.html ----------------- */
+
+#calendar-page {
+    background-color:rgb(172, 50, 50);
+}
+
+.header-cell {
+    border: 1px solid rgb(0, 0, 0); 
+    text-align: center;
+    flex-basis: 33.3333%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 0;
+    -webkit-tap-highlight-color: white;
+    padding:2.5vw;
+    color:black;
+    background-color:white;
+    
+}
+
+/* .header-content {
+    margin-top:-5%;
+} */
+
+#calendar-header {
+    text-align: center;
+    color:white;
+    font-size:2vw;
+    padding-top:1%;
+}
+
+.cell {
+    border: 1px solid rgb(0, 0, 0); 
+    text-align: center;
+    flex-basis: 33.3333%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 0;
+    -webkit-tap-highlight-color: rgb(245, 94, 94);
+    padding:2.5vw;
+    color:black;
+    background-color: white;
+}
+
+
+
+#calendar {
+    padding:1%;
+}
+
+
+
+/* ----------------- calendar.html ----------------- */
