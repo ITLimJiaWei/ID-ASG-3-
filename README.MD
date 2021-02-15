@@ -16,6 +16,7 @@ Date        | Description                                               | Status
 12/2/2021   | Added functionality of removing/creating tasks            |  Done 
 13/2/2021   | Finished selection.html and login.html                    |  Done 
 13/2/2021   | Made index.html,login.html and home.html fully responsive |  Done 
+14/2/2021   | Finished base template of calendar.html                   |  Done 
  
 
 
