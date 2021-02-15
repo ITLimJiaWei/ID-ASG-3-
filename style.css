@@ -38,6 +38,31 @@ body {
     color:white;
 }
 
+.background {
+    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
+  }
+.cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border: solid 1px #D7D4E4;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 12s ease-in forwards infinite;
+}
+
+
+
 /* ----------------- Universal CSS ----------------- */
 
 /* ----------------- index.html ----------------- */
@@ -53,6 +78,16 @@ body {
     background-position: center;
     margin: 0px;
     
+}
+
+#video {
+    object-fit: cover;
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
 }
 
 
@@ -322,7 +357,7 @@ form {
 }
 
 .selection-logo {
-    height:350px;
+    height:30%;
     margin-left: auto;
     margin-right: auto;
     display:block;
@@ -331,16 +366,16 @@ form {
 #selection-title {
     color:white;
     font-family:Arial, Helvetica, sans-serif;
-    font-size:40px;
+    font-size:2vw;
     text-align: center;
-    margin-bottom:40px;
+    margin-bottom:2%;
     
 }
 
 .selection-container1,
 .selection-container2 {
     align-content:center;
-    padding:50px;
+    padding:2%;
 }
 
 
@@ -355,9 +390,7 @@ form {
 
 #select-btn {
     border:0px;
-    padding:10px;
-    padding-left:20px;
-    padding-right:20px;
+    padding:0.5%;
     background-color:rgb(223, 79, 79);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
@@ -365,16 +398,13 @@ form {
     margin-left: auto;
     margin-right: auto;
     display:block;
-    margin-top:100px;
-    width:60%
+    margin-top:2%;
+    width:60%;
 }
-
 
 #select-btn:disabled {
     border:0px;
-    padding:10px;
-    padding-left:20px;
-    padding-right:20px;
+    padding:0.5%;
     background-color:rgb(200, 69, 50);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
@@ -382,8 +412,9 @@ form {
     margin-left: auto;
     margin-right: auto;
     display:block;
-    margin-top:100px;
-    width:60%
+    margin-top:2%;
+    width:60%;
+    margin-bottom:5%;
 }
 
 
@@ -573,11 +604,11 @@ input.checkbox {
 
 .home-footer {
     background-color:rgb(172, 50, 50);
-    position: fixed; 
+    position:relative; 
     /* Dong En added this line  */
-      
+    width:100%;
     bottom: 0;
-    max-height:20%;
+    height:15%;
 }
 
 .home-footer-content,
