@@ -13,6 +13,7 @@ PokePlanner allows users to track their habits and set goals for themselves all 
 
 Date        | Description                                             | Status
 ----------- | ------------------------------------------------------  | ------
+12/2/2021   | Added functionality of removing/creating tasks          |  Done 
 13/2/2021   | Finished selection.html and login.html                  |  Done 
  
 
