@@ -344,26 +344,12 @@ form {
 }
 
 
-.charmander-card,
-.bulbasaur-card,
-.squirtle-card,
-.pikachu-card {
+.selection-card {
     box-shadow: 5px 5px 6px -4px #000000;
 }
 
-.charmander-card,
-.bulbasaur-card,
-.squirtle-card,
-.pikachu-card {
-    box-shadow: 5px 5px 6px -4px #000000;
-}
-
-.card:hover {
-    background-color:rgb(223, 79, 79)
-}
-
-
-.selected{
+.selected,
+.selection-card:hover {
     background-color:rgb(223, 79, 79)   !important
 }
 
@@ -493,6 +479,7 @@ form {
     display:flex;
     flex-direction: row;
     width:100%;
+   
 }
 
 .hp-bar,
@@ -505,6 +492,7 @@ form {
 #xp-number {
     color:white;
     font-size:20px;
+    margin-left:5%;
     
 }
 
@@ -575,6 +563,12 @@ form {
 
 input.checkbox {
     zoom: 2.5;
+}
+
+.shop-container {
+    text-align: center;
+    padding-top:3%;
+
 }
 
 .home-footer {
