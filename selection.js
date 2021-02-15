@@ -4,7 +4,7 @@ let APIKEY = "60213a203f9eb665a16892a7";
 $(document).ready(function () {
   let avatar;
   let avatar_img_url;
-  var starters = ["pikachu","charmander","bulbasaur","squirtle"]
+  var starters = ["pichu","charmander","bulbasaur","squirtle"]
   var i;
   for (i = 0; i < starters.length; i++) {
     let pokemonName = starters[i];
