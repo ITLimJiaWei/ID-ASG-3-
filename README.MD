@@ -20,7 +20,7 @@ Date        | Description                                             | Status
 
 <h2>Design Process</h2>
 
-<p>We utilized Adobe XD to plan out a wireframe at first as we felt it was important to communicate our ideas and concepts with each other even though a wireframe submission is not required this time around.</p>
+<p>We utilized Adobe XD to plan out a wireframe at first as we felt it was important to communicate our ideas and concepts with each other even though a wireframe submission is not required this time around. Furthermore, communication is even more important in the creation of PokePlanner as we were split into front and back-end developers. While creating PokePlanner, I ensured each portion of code we were working on was responsive so we did not have to revisit them in the future when we should be validating our code</p>
 
 <p>
 
@@ -59,21 +59,26 @@ We intend to allow users to pick their character/avatar from 4 initial pokemon f
 
 <h3>Possible Problems</h3>
 
-
+* PokeAPI had a daily rate limit of 300 requests per resource per IP address. We believe this is more than sufficient but it should be noted that if one was to consistently "spam" the GET requests by visiting the webpage many, many times a day, the limit may be hit causing certain images to not be initialized properly.
 
 
 <h2>Credits<h2>
 
-
-
-
 <h3>Technologies Used</h3>
+
+* HTML
+* CSS
+* Javascript
+* jQuery
+* Adobe XD 
 
 
 
 <h3>APIs/Libraries Used</h3>
 
 * PokeAPI - https://pokeapi.co/
+* Popper.js - https://popper.js.org/
+* Bootstrap - https://getbootstrap.com/
 
 
 
@@ -84,7 +89,7 @@ We intend to allow users to pick their character/avatar from 4 initial pokemon f
 
 <h2>Links</h2>
 
-* FreePrivacyPolicy - https://app.freeprivacypolicy.com/
+* FreePrivacyPolicy - https://app.freeprivacypolicy.com/<br>
 * GoogleFonts(Roboto) - https://fonts.google.com/specimen/Roboto?query=roboto&sidebar.open=true&selection.family=Roboto<br>
 * CSS Box Shadow Generator - https://html-css-js.com/css/generator/box-shadow/
 
