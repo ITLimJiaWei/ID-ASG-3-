@@ -66,13 +66,13 @@ body {
 /* ----------------- Universal CSS ----------------- */
 
 
+
 .splash {
     position:fixed;
     width:100%;
     height:100vh;
     background:rgb(172, 50, 50);
     z-index:200;
-
 }
 
 #splash-loading {
@@ -87,7 +87,6 @@ body {
     height:100vh;
     background:rgb(172, 50, 50);
     z-index:-10;
-
 }
 
 
@@ -103,7 +102,6 @@ body {
     background-size: cover;
     background-position: center;
     margin: 0px;
-    
 }
 
 #video {
@@ -116,11 +114,21 @@ body {
     z-index:-1;
 }
 
+#signup-loading {
+    width:5vw;
+    height:5vh;
+}
+
+.signup-flexbox {
+    display:flex;
+    flex-direction: row;
+}
+
 
 .signup-top-container {
     box-shadow: 5px 5px 6px -4px #000000;
     background-color: rgb(172, 50, 50);
-    margin-bottom:20px;
+    margin-bottom:3%;
 }
 
 .logo {
@@ -133,18 +141,7 @@ body {
     color:white;
 }
 
-#signup-btn {
-    padding:5px;
-    border:0px;
-    text-align:center;
-    margin-top:50px;
-    padding:10px;
-    padding-left:20px;
-    padding-right:20px;
-    background-color:rgb(223, 79, 79);
-    color:white;
-    box-shadow: 5px 5px 6px -4px #000000;
-}
+
 
 #toplogin-btn {
     padding:5px;
@@ -211,11 +208,13 @@ form {
     max-width:370px;
 }
 
+
 #signup-btn {
+    height:50%;
     width:90%;
     border:0px;
-    padding:8px;
-    background-color:rgb(223, 79, 79);
+    padding:1.5%;
+    background-color:rgb(134, 31, 31);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
 }
@@ -223,7 +222,7 @@ form {
 #signup-btn:disabled {
     width:90%;
     border:0px;
-    padding:8px;
+    padding:1.5%;
     background-color:rgb(134, 31, 31);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
@@ -371,6 +370,12 @@ form {
     background-color:rgb(134, 31, 31);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
+}
+
+#login-loading {
+    
+    width:5vw;
+    margin:auto;
 }
 
 
