@@ -95,6 +95,7 @@ We intend to allow users to pick their character/avatar from 4 initial pokemon f
 * FreePrivacyPolicy - https://app.freeprivacypolicy.com/<br>
 * GoogleFonts(Roboto) - https://fonts.google.com/specimen/Roboto?query=roboto&sidebar.open=true&selection.family=Roboto<br>
 * CSS Box Shadow Generator - https://html-css-js.com/css/generator/box-shadow/
+* Event Calendar Widget - https://www.sliderrevolution.com/resources/html-calendar/
 
 <h2>Acknowledgements</h2>
 
