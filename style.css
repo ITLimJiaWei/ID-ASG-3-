@@ -372,6 +372,15 @@ form {
     
 }
 
+.selection-card-img {
+    height:30vh;
+}
+
+.selection-card-deck {
+    padding:5%;
+   
+}
+
 .selection-container1,
 .selection-container2 {
     align-content:center;
@@ -381,6 +390,7 @@ form {
 
 .selection-card {
     box-shadow: 5px 5px 6px -4px #000000;
+
 }
 
 .selected,
@@ -415,6 +425,7 @@ form {
     margin-top:2%;
     width:60%;
     margin-bottom:5%;
+
 }
 
 
@@ -559,6 +570,8 @@ form {
     display:flex;
     flex-direction:row;
     margin-top:2%;
+    width:100%;
+    
 }
 
 .flex-item1 {
@@ -571,7 +584,7 @@ form {
     background-color: rgb(226, 58, 58);
     width:90%;
     color:white;
-    font-size:20px;
+    font-size:1vw;
 }
 
 .flex-item3 {
@@ -586,8 +599,7 @@ form {
     text-align: center;
     font-size:0.5vw;
     position:relative;
-    /* This was done by dong en */
-    position: absolute;
+    position:absolute;
     bottom: 0;
     width: 80%;
 }
@@ -669,11 +681,6 @@ input.checkbox {
     background-color: white;
 }
 
-
-/* .header-content {
-    margin-top:-5%;
-} */
-
 #calendar-header {
     text-align: center;
     color:white;
@@ -686,6 +693,18 @@ input.checkbox {
 
 #calendar {
     padding:1%;
+}
+
+.cell-content-header {
+    position: absolute;
+    top: 4%;
+    left: 4%;
+}
+
+.cell-content {
+    position:absolute;
+    font-size:0.8vw;
+
 }
 
 
