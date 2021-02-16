@@ -684,7 +684,7 @@ input.checkbox {
     transform: translate3d(0, 0, 0);
     width: 420px;
     margin: 5% auto;
-    height: 40%;
+    height: 100%;
     overflow: hidden;
 }
     
