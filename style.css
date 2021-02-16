@@ -65,18 +65,31 @@ body {
 
 /* ----------------- Universal CSS ----------------- */
 
-/* ----------------- splash.html ----------------- */
 
-#splash-screen {
-    background-color:rgb(172, 50, 50); 
+.splash {
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:rgb(172, 50, 50);
+    z-index:200;
+
 }
 
 #splash-loading {
-    width:20vw;
+    width:10vw;
     margin: auto;
 }
 
-/* ----------------- splash.html ----------------- */
+.splash.display-none {
+    position:fixed;
+    opacity:0;
+    width:100%;
+    height:100vh;
+    background:rgb(172, 50, 50);
+    z-index:-10;
+
+}
+
 
 /* ----------------- index.html ----------------- */
 

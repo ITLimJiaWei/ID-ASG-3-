@@ -1,3 +1,16 @@
+const splash = document.querySelector('.splash')
+
+document.addEventListener('DOMContentLoaded',(e)=>{
+  setTimeout(()=>{
+    splash.classList.add('display-none');
+  }, 2000);
+})
+
+
+
+
+
+
 let APIKEY = "60213a203f9eb665a16892a7";
 let currentUser;
 
