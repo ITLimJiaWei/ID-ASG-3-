@@ -65,6 +65,19 @@ body {
 
 /* ----------------- Universal CSS ----------------- */
 
+/* ----------------- splash.html ----------------- */
+
+#splash-screen {
+    background-color:rgb(172, 50, 50); 
+}
+
+#splash-loading {
+    width:20vw;
+    margin: auto;
+}
+
+/* ----------------- splash.html ----------------- */
+
 /* ----------------- index.html ----------------- */
 
 #signup-page {
