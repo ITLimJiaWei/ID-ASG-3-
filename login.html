@@ -24,6 +24,7 @@
           <img src="pictures/logo_transparent.png" id="login-logo">
           <form id="login-form">
             <input type="text" id="login-username" class="form-username" placeholder="Username(case-sensitive)"><br>
+            <div id="tooltip" role="tooltip" >Username not found!</div>
             <input type="text" id="login-password"  placeholder="Password"><br>
             <button type="button" id="login-btn" disabled >Login</button>
             <lottie-player src="https://assets10.lottiefiles.com/temp/lf20_Tw0dyZ.json"  background="transparent"  speed="1"  id="login-loading"  loop  autoplay></lottie-player>
@@ -43,9 +44,10 @@
       
       
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <script src="javascript/script.js"></script>
+    <script src="javascript/login.js"></script>
   </body>
 </html>

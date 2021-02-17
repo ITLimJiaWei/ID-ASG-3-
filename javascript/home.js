@@ -1,12 +1,6 @@
 let APIKEY = "60213a203f9eb665a16892a7";
 const splash = document.querySelector('.splash')
 
-document.addEventListener('DOMContentLoaded',(e)=>{
-  setTimeout(()=>{
-    splash.classList.add('display-none');
-  }, 2000);
-})
-
 $(document).ready(function () {
 let avatar_img_url = sessionStorage.getItem("avatar_img_url");
 let avatar = sessionStorage.getItem("avatar");
@@ -234,7 +228,13 @@ updateDailies();
 updateTodo();
 updateShop();
 if(overdue.length!=0){
-    $(".modal-body").text("You didn't do: " + overdue);
+    console.log(overdue);
+    let overduestring = "";
+    for(let i = 0 ;i<overdue.length;i++){
+        overduestring+=overdue[i]+", ";
+    }
+    overduestring2 = overduestring.slice(0,-2);
+    $(".modal-body").text("You didn't do: " + overduestring2);
     $('#homeModal').modal({ show: true});
 }
 
@@ -261,7 +261,12 @@ $("#home-todo-add").keypress(function(event) {
        }else{
 
             todos[todo[0]] = [dueDate,0];
-       }          
+       }        
+       var height = $("#home-todo-column").height();
+       console.log(height);
+       height = height + 10;
+       console.log(height);
+       $("#home-todo-column").css({"height": height+"px"}); 
        updateTodo();
        $("#home-todo-add").val('');
        //$(':focus').blur()          
