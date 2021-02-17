@@ -687,6 +687,7 @@ input.checkbox {
 
 #calendar-page {
     font-family: "Comfortaa", sans-serif;
+    background-color:rgb(223, 79, 79);
 }
 .explanation {
     background: var(--color);
@@ -899,7 +900,19 @@ div.date:nth-child(58) {
 
 /* ----------------- calendar.html ----------------- */
 
+/* ----------------- calendar.html ----------------- */
 
 #skill-tree-page {
-    background-color:
+    background-color:rgb(223, 79, 79);
 }
+
+#skill-tree-heading {
+    color:white;
+    font-size:4.5vw;
+    text-align: center;
+}
+
+.skill-tree-divider {
+    height:20%;
+}
+

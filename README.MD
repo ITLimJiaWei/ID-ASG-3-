@@ -18,7 +18,7 @@ Date        | Description                                               | Status
 13/2/2021   | Made index.html,login.html and home.html fully responsive |  Done 
 14/2/2021   | Finished base template of calendar.html                   |  Done 
 15/2/2021   | Added Splash Screen                                       |  Done 
- 
+17/2/2021   | Main Functionality of site is Complete                    |  Done 
  
 
 
