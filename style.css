@@ -334,15 +334,15 @@ form {
 }
 
 #login-logo {
-    height:350px;
+    height:25%;
 }
 
 #login-username,
 #login-password {
     color:white;
     width:50%;
-    padding:10px;
-    margin-bottom:25px;
+    padding:0.5%;
+    margin-bottom:2%;
     background-color:rgb(134, 31, 31);
     border:0px;
     
@@ -355,8 +355,7 @@ form {
 #login-btn{
     width:50%;
     border:0px;
-    margin-top:0px;
-    padding:8px;
+    padding:0.5%;
     background-color:rgb(223, 79, 79);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
@@ -365,15 +364,14 @@ form {
 #login-btn:disabled{
     width:50%;
     border:0px;
-    margin-top:0px;
-    padding:8px;
+    padding:0.5%;
     background-color:rgb(134, 31, 31);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
 }
 
 #login-loading {
-    
+    height:5vh;
     width:5vw;
     margin:auto;
 }
@@ -570,8 +568,8 @@ form {
 }
 
 .home-middle-container {
-    padding:50px;
-    height:70%;
+    padding:1%;
+    height:50%;
 }
 
 .home-middle-row {
@@ -592,9 +590,9 @@ form {
 
 .home-column {
     background-color: darkgrey;
-    padding:10px;
+    padding:2%;
     height:100%;
-    
+    z-index:1;
 }
 
 .flex-container {
@@ -602,37 +600,44 @@ form {
     flex-direction:row;
     margin-top:2%;
     width:100%;
-    
 }
 
 .flex-item1 {
     padding:3%;
-    background-color: rgb(197, 63, 63);
+    background-color:rgb(226, 58, 58); 
 }
 
 .flex-item2 {
     padding:3%;
-    background-color: rgb(226, 58, 58);
+    background-color: rgb(197, 63, 63);
     width:90%;
     color:white;
     font-size:1vw;
 }
 
 .flex-item3 {
-    background-color: rgb(226, 58, 58);
+    background-color: rgb(197, 63, 63);
     padding:3%;
     padding-top:3%;
+}
+
+.home-info-container {
     
 }
 
+.home-info-row {
+
+}
+
+.home-info-col {
+    background-color:darkgrey;
+    padding:1%;
+    margin-top:10%;
+}
+
 .home-info {
-    margin-top:60%;
     text-align: center;
     font-size:0.5vw;
-    position:relative;
-    position:absolute;
-    bottom: 0;
-    width: 80%;
 }
 
 input.checkbox {
@@ -647,7 +652,7 @@ input.checkbox {
 
 .home-footer {
     background-color:rgb(172, 50, 50);
-    position:fixed; 
+    position:relative; 
     /* Dong En added this line  */
     width:100%;
     bottom: 0;
@@ -665,7 +670,9 @@ input.checkbox {
 }
 
 .home-footer-row {
-    padding:10px;
+    padding:1%;
+    position:relative; 
+    bottom:0;
 }
 
 .home-footer-anchor,
@@ -680,401 +687,220 @@ input.checkbox {
 
 /* ----------------- calendar.html ----------------- */
 
-*, *:before, *:after {
-    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
-    
-
-*, *:before, *:after {
-    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-    }
-
-    
 #calendar-page {
-    
-    overflow: hidden;
-    font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    color: white;
-    margin: 0;
-    padding: 0;
-    background: #4A4A4A;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}      
-    
-#calendar {
-    
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    width: 420px;
-    margin: 5% auto;
-    height: 100%;
-    overflow: hidden;
+    font-family: "Comfortaa", sans-serif;
 }
-    
-.header {
-    height: 50px;
-    width: 420px;
-    background:rgb(223, 79, 79);
+.explanation {
+    background: var(--color);
+    grid-column: span 6;
+    padding: 28px;
+    color: #fff;
+    line-height: 1.7;
+}
+.explanation a {
+    text-decoration: none;
+    color: #fff;
+    padding: 3px 0;
+    border-bottom: 1px dashed;
+}
+.explanation a:hover {
+    border-bottom: 1px solid;
+}
+/* footer {
+    background: var(--color);
     text-align: center;
-    position:relative;
-    z-index: 100;
-}
-    
-.header h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    line-height: 50px;
-    font-weight: 100;
-    letter-spacing: 1px;
-}
-    
-.left, .right {
-    position: absolute;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    top: 50%;
-    margin-top: -7.5px;
-    cursor: pointer;
-}
-    
-.left {
-    border-width: 7.5px 10px 7.5px 0;
-    border-color: transparent rgba(160, 159, 160, 1) transparent transparent;
-    left: 20px;
-}
-    
-.right {
-    border-width: 7.5px 0 7.5px 10px;
-    border-color: transparent transparent transparent rgba(160, 159, 160, 1);
-    right: 20px;
-}
-    
-.month {
-    /*overflow: hidden;*/
-    opacity: 0;
-}
-    
-.month.new {
-    -webkit-animation: fadeIn 1s ease-out;
-    opacity: 1;
-}
-    
-.month.in.next {
-    -webkit-animation: moveFromTopFadeMonth .4s ease-out;
-    -moz-animation: moveFromTopFadeMonth .4s ease-out;
-    animation: moveFromTopFadeMonth .4s ease-out;
-    opacity: 1;
-}
-    
-.month.out.next {
-    -webkit-animation: moveToTopFadeMonth .4s ease-in;
-    -moz-animation: moveToTopFadeMonth .4s ease-in;
-    animation: moveToTopFadeMonth .4s ease-in;
-    opacity: 1;
-}
-    
-.month.in.prev {
-    -webkit-animation: moveFromBottomFadeMonth .4s ease-out;
-    -moz-animation: moveFromBottomFadeMonth .4s ease-out;
-    animation: moveFromBottomFadeMonth .4s ease-out;
-    opacity: 1;
-}
-    
-.month.out.prev {
-    -webkit-animation: moveToBottomFadeMonth .4s ease-in;
-    -moz-animation: moveToBottomFadeMonth .4s ease-in;
-    animation: moveToBottomFadeMonth .4s ease-in;
-    opacity: 1;
-}
-    
-.week {
-    background:rgb(172, 50, 50);;
-}
-    
-.day {
-    display: inline-block;
-    width: 60px;
-    padding: 10px;
-    text-align: center;
-    vertical-align: top;
-    cursor: pointer;
-    background:rgb(172, 50, 50);;  
-    position: relative;
-    z-index: 100;
-}
-    
-.day.other {
-    color: rgba(255, 255, 255, .3);
-}
-    
-.day.today {
-    color: rgba(156, 202, 235, 1);
-}
-    
-.day-name {
-    font-size: 9px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    color: rgba(255, 255, 255, .5);
-    letter-spacing: .7px;
-}
-    
-.day-number {
-    font-size: 24px;
-    letter-spacing: 1.5px;
-}
-    
-    
-.day .day-events {
-    list-style: none;
-    margin-top: 3px;
-    text-align: center;
-    height: 12px;
-    line-height: 6px;
-    overflow: hidden;
-}
-    
-.day .day-events span {
-    vertical-align: top;
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    width: 5px;
-    height: 5px;
-    line-height: 5px;
-    margin: 0 1px;
-}
-    
-.blue { background: rgba(156, 202, 235, 1); }
-.orange { background: rgba(247, 167, 0, 1); }
-.green { background: rgba(153, 198, 109, 1); }
-.yellow { background: rgba(249, 233, 0, 1); }
-    
-.details {
-    position: relative;
-    width: 420px;
-    height: 75px;
-    background: rgba(164, 164, 164, 1);
-    margin-top: 5px;
-    border-radius: 4px;
-}
-    
-.details.in {
-    -webkit-animation: moveFromTopFade .5s ease both;
-    -moz-animation: moveFromTopFade .5s ease both;
-    animation: moveFromTopFade .5s ease both;
-}
-    
-.details.out {
-    -webkit-animation: moveToTopFade .5s ease both;
-    -moz-animation: moveToTopFade .5s ease both;
-    animation: moveToTopFade .5s ease both;
-}
-    
-.arrow {
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    margin-left: -2px;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 0 5px 5px 5px;
-    border-color: transparent transparent rgba(164, 164, 164, 1) transparent;
-    transition: all 0.7s ease;
-}
-    
-.events {
-    height: 75px;
-    padding: 7px 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-    
-.events.in {
-    -webkit-animation: fadeIn .3s ease both;
-    -moz-animation: fadeIn .3s ease both;
-    animation: fadeIn .3s ease both;
-}
-    
-.events.in {
-    -webkit-animation-delay: .3s;
-    -moz-animation-delay: .3s;
-    animation-delay: .3s;
-}
-    
-.details.out .events {
-    -webkit-animation: fadeOutShrink .4s ease both;
-    -moz-animation: fadeOutShink .4s ease both;
-    animation: fadeOutShink .4s ease both;
-}
-    
-.events.out {
-    -webkit-animation: fadeOut .3s ease both;
-    -moz-animation: fadeOut .3s ease both;
-    animation: fadeOut .3s ease both;
-}
-    
-.event {
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: .5px;
-    padding: 2px 16px;
-    vertical-align: top;
-}
-    
-.event.empty {
-    color: #eee;
-}
-    
-.event-category {
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    margin: 6px 0 0;
-    vertical-align: top;
-}
-    
-.event span {
-    display: inline-block;
-    padding: 0 0 0 7px;
-}
-    
-.legend {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 30px;
-    background: rgb(223, 79, 79);
-    line-height: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    place-content: center;
 }
-    
-.entry {
-    position: relative;
-    padding: 0 0 0 25px;
-    font-size: 13px;
+footer a {
+    text-decoration: none;
     display: inline-block;
-    line-height: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     background: transparent;
+    border: 1px dashed #fff;
+    color: #fff;
+    margin: 0 5px;
 }
-    
-.entry:after {
+footer a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+footer a .icons {
+    margin-top: 8px;
+    display: inline-block;
+    font-size: 20px;
+} */
+.date {
+    background: var(--color);
+    padding: 15px;
+    position: relative;
+    font-size: 20px;
+}
+.month {
+    background: var(--color);
+    font: 900 75px "Montserrat", sans-serif;
+    text-transform: uppercase;
+    padding: 40px 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+}
+.month--feb {
+    grid-column: span 3;
+}
+.month--mar {
+    grid-column: span 2;
+}
+.month--title {
+    grid-column: span 6;
+    text-align: right;
+    padding-right: 60px;
+}
+.main-content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: repeat(10, 170px) 80px;
+    grid-template-columns: repeat(7, minmax(170px, 1fr));
+    padding:1%;
+}
+.event {
+    z-index: 10;
+    background: transparent;
+    padding-top: 40px;
+}
+.event__name {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+}
+.event--1 {
+    grid-column: 3 / span 2;
+    grid-row: 3;
+}
+.event--2 {
+    grid-column: 4 / span 3;
+    grid-row: 3;
+    padding-top: 85px;
+}
+.event--3 {
+    grid-column: 2;
+    grid-row: 6;
+}
+.event--4a {
+    grid-column: 7;
+    grid-row: 7;
+}
+.event--4a .event__name {
+    border-radius: 20px 0 0 20px;
+}
+.event--4b {
+    grid-column: 1 / span 2;
+    grid-row: 8;
+}
+.event--4b .event__name {
+    border-radius: 0 20px 20px 0;
+}
+.event--5 {
+    grid-column: 5;
+    grid-row: 9;
+}
+div.date:nth-child(15) {
+    grid-column: 3;
+    grid-row: 3;
+}
+div.date:nth-child(16) {
+    grid-column: 4;
+    grid-row: 3;
+}
+div.date:nth-child(17) {
+    grid-column: 5;
+    grid-row: 3;
+}
+div.date:nth-child(18) {
+    grid-column: 6;
+    grid-row: 3;
+}
+div.date:nth-child(34) {
+    grid-column: 2;
+    grid-row: 6;
+}
+div.date:nth-child(46) {
+    grid-column: 7;
+    grid-row: 7;
+}
+div.date:nth-child(47) {
+    grid-column: 1;
+    grid-row: 8;
+}
+div.date:nth-child(48) {
+    grid-column: 2;
+    grid-row: 8;
+}
+div.date:nth-child(58) {
+    grid-column: 5;
+    grid-row: 9;
+}
+.date:after {
     position: absolute;
-    content: '';
-    height: 5px;
-    width: 5px;
-    top: 12px;
-    left: 14px;
+    z-index: 20;
+    top: 15px;
+    right: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-    
-.entry.blue:after { background: rgba(156, 202, 235, 1); }
-.entry.orange:after { background: rgba(247, 167, 0, 1); }
-.entry.green:after { background: rgba(153, 198, 109, 1); }
-.entry.yellow:after { background: rgba(249, 233, 0, 1); }
-    
-    /* Animations are cool!  */
-@-webkit-keyframes moveFromTopFade {
-    from { opacity: .3; height:0px; margin-top:0px; -webkit-transform: translateY(-100%); }
+.date:nth-child(-7n + 30):after {
+    content: "Fri";
 }
-@-moz-keyframes moveFromTopFade {
-    from { height:0px; margin-top:0px; -moz-transform: translateY(-100%); }
+.date:nth-child(-7n + 24):after {
+    content: "Sat";
 }
-@keyframes moveFromTopFade {
-    from { height:0px; margin-top:0px; transform: translateY(-100%); }
+.date:nth-child(-7n + 25):after {
+    content: "Sun";
 }
-    
-@-webkit-keyframes moveToTopFade {
-    to { opacity: .3; height:0px; margin-top:0px; opacity: 0.3; -webkit-transform: translateY(-100%); }
+.date:nth-child(-7n + 26):after {
+    content: "Mon";
 }
-@-moz-keyframes moveToTopFade {
-    to { height:0px; -moz-transform: translateY(-100%); }
+.date:nth-child(-7n + 27):after {
+    content: "Tue";
 }
-@keyframes moveToTopFade {
-    to { height:0px; transform: translateY(-100%); }
+.date:nth-child(-7n + 28):after {
+    content: "Wed";
 }
-    
-@-webkit-keyframes moveToTopFadeMonth {
-    to { opacity: 0; -webkit-transform: translateY(-30%) scale(.95); }
+.date:nth-child(-7n + 29):after {
+    content: "Thu";
 }
-    
-@-moz-keyframes moveToTopFadeMonth {
-    to { opacity: 0; -moz-transform: translateY(-30%); }
+.date:nth-child(7n + 31):after {
+    content: "Fri";
 }
-@keyframes moveToTopFadeMonth {
-    to { opacity: 0; -moz-transform: translateY(-30%); }
+.date:nth-child(7n + 32):after {
+    content: "Sat";
 }
-    
- @-webkit-keyframes moveFromTopFadeMonth {
-    from { opacity: 0; -webkit-transform: translateY(30%) scale(.95); }
+.date:nth-child(7n + 33):after {
+    content: "Sun";
 }
-@-moz-keyframes moveFromTopFadeMonth {
-    from { opacity: 0; -moz-transform: translateY(30%); }
+.date:nth-child(7n + 34):after {
+    content: "Mon";
 }
-@keyframes moveFromTopFadeMonth {
-    from { opacity: 0; -moz-transform: translateY(30%); }
+.date:nth-child(7n + 35):after {
+    content: "Tue";
 }
-    
-@-webkit-keyframes moveToBottomFadeMonth {
-    to { opacity: 0; -webkit-transform: translateY(30%) scale(.95); }
+.date:nth-child(7n + 36):after {
+    content: "Wed";
 }
-@-moz-keyframes moveToBottomFadeMonth {
-    to { opacity: 0; -webkit-transform: translateY(30%); }
+.date:nth-child(7n + 37):after {
+    content: "Thu";
 }
-@keyframes moveToBottomFadeMonth {
-    to { opacity: 0; -webkit-transform: translateY(30%); }
-}
-    
-@-webkit-keyframes moveFromBottomFadeMonth {
-    from { opacity: 0; -webkit-transform: translateY(-30%) scale(.95); }
-}
-@-moz-keyframes moveFromBottomFadeMonth {
-    from { opacity: 0; -webkit-transform: translateY(-30%); }
-}
-@keframes moveFromBottomFadeMonth {
-    from { opacity: 0; -webkit-transform: translateY(-30%); }
-}
-    
-@-webkit-keyframes fadeIn  {
-    from { opacity: 0; }
-}
-@-moz-keyframes fadeIn  {
-    from { opacity: 0; }
-}
-@keyframes fadeIn  {
-    from { opacity: 0; }
-}
-    
-@-webkit-keyframes fadeOut  {
-    to { opacity: 0; }
-}
-@-moz-keyframes fadeOut  {
-    to { opacity: 0; }
-}
-@keyframes fadeOut  {
-    to { opacity: 0; }
-}
-    
-@-webkit-keyframes fadeOutShink  {
-    to { opacity: 0; padding: 0px; height: 0px; }
-}
-@-moz-keyframes fadeOutShink  {
-    to { opacity: 0; padding: 0px; height: 0px; }
-}
-@keyframes fadeOutShink  {
-    to { opacity: 0; padding: 0px; height: 0px; }
-}
-    
-
 
 
 /* ----------------- calendar.html ----------------- */
