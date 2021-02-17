@@ -681,6 +681,24 @@ input.checkbox {
 
 /* ----------------- calendar.html ----------------- */
 
+#calendar-desc {
+    text-align:center;
+    color:white;
+    font-size:2vw;
+    box-shadow: 5px 5px 6px -4px #000000;
+    max-width:50vw;
+    padding:1%;
+    margin:auto;
+}
+
+
+#calendar-heading {
+    color:white;
+    text-align: center;
+    font: 900 4.5vw "Montserrat", sans-serif;
+    
+}
+
 * {
     box-sizing: border-box;
 }
@@ -764,6 +782,7 @@ footer a .icons {
     grid-template-rows: repeat(10, 170px) 80px;
     grid-template-columns: repeat(7, minmax(170px, 1fr));
     padding:1%;
+    
 }
 .event {
     z-index: 10;
@@ -900,7 +919,7 @@ div.date:nth-child(58) {
 
 /* ----------------- calendar.html ----------------- */
 
-/* ----------------- calendar.html ----------------- */
+/* ----------------- skilltree.html ----------------- */
 
 #skill-tree-page {
     background-color:rgb(223, 79, 79);
@@ -908,11 +927,82 @@ div.date:nth-child(58) {
 
 #skill-tree-heading {
     color:white;
-    font-size:4.5vw;
     text-align: center;
+    font: 900 4.5vw "Montserrat", sans-serif;
 }
 
 .skill-tree-divider {
     height:20%;
 }
 
+#skill-tree-desc {
+    text-align:center;
+    color:white;
+    font-size:2vw;
+    box-shadow: 5px 5px 6px -4px #000000;
+    max-width:50vw;
+    padding:1%;
+    margin:auto;
+}
+
+.skill-tree-top-container {
+    padding:1%;
+    margin-top:3%;
+    height:80%;
+}
+
+
+.skill-tree-col {
+    height:100%;
+}
+
+.skill-header {
+    color:white;
+    text-align: center;
+    font: 600 1.5vw "Montserrat", sans-serif;
+    padding:3%;
+    box-shadow: 5px 5px 6px -4px #000000;
+    background-color:rgb(233, 105, 105);
+}
+
+.skill-line {
+    border-left: 15px solid white;
+    height: 80vh;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+    z-index:-1;
+}
+
+.skill-content:disabled {
+    color:white;
+    background-color:rgb(233, 105, 105);
+    border:0px;
+    display:block;
+    margin:auto;
+    width:80%;
+    height:40%;
+    margin-top:20%;
+    box-shadow: 5px 5px 6px -4px #000000;
+}
+
+.skill-content {
+    color:white;
+    background-color:rgb(155, 41, 41);
+    border:0px;
+    display:block;
+    margin:auto;
+    width:80%;
+    height:40%;
+    margin-top:20%;
+}
+
+
+
+
+
+
+
+
+/* ----------------- skilltree.html ----------------- */
