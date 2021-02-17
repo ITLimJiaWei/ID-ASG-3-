@@ -550,7 +550,6 @@ form {
     display:flex;
     flex-direction: row;
     width:100%;
-   
 }
 
 .hp-bar,
@@ -569,16 +568,17 @@ form {
 
 .home-middle-container {
     padding:1%;
-    height:50%;
+    height:45vh;
 }
 
 .home-middle-row {
-    height:70%;
+    height:45vh;
 }
 
 .home-title {
     color:rgb(172, 50, 50);
 }
+
 
 .home-add {
     background-color:grey;
@@ -591,7 +591,7 @@ form {
 .home-column {
     background-color: darkgrey;
     padding:2%;
-    height:100%;
+    height:45vh;
     z-index:1;
 }
 
@@ -599,7 +599,7 @@ form {
     display:flex;
     flex-direction:row;
     margin-top:2%;
-    width:100%;
+    height:12%;
 }
 
 .flex-item1 {
@@ -622,7 +622,8 @@ form {
 }
 
 .home-info-container {
-    
+    display:block;
+    margin-bottom:2%;
 }
 
 .home-info-row {
@@ -630,14 +631,15 @@ form {
 }
 
 .home-info-col {
-    background-color:darkgrey;
-    padding:1%;
-    margin-top:10%;
+    
+    margin-top:5%;
+    
 }
 
 .home-info {
     text-align: center;
-    font-size:0.5vw;
+    font-size:0.8vw;
+    background-color:darkgrey;
 }
 
 input.checkbox {
