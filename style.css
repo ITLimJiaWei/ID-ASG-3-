@@ -85,6 +85,8 @@ body {
 }
 
 
+
+
 /* ----------------- Universal CSS ----------------- */
 
 
@@ -138,10 +140,10 @@ body {
     color:white;
 }
 
-#tooltip {
+.tooltip {
     background-color:rgb(223, 79, 79);
     padding:1%;
-    border-radius:50%;
+    border-radius:20%;
 }
 
 
@@ -523,6 +525,8 @@ form {
 
 .home-top-container {
     background-color: rgb(172, 50, 50);
+    padding-top:0.5%;
+    padding-bottom:0.5%;
 }
 
 .home-top-row {
@@ -539,7 +543,6 @@ form {
 #home-username {
     color:white;
     font-size:1.5vw;
-    margin-top:5%;
 }
 
 #home-level {
@@ -573,11 +576,11 @@ form {
 
 .home-middle-container {
     padding:1%;
-    height:45vh;
+    /* height:45vh; */
 }
 
 .home-middle-row {
-    height:45vh;
+    /* height:45vh; */
 }
 
 .home-title {
@@ -597,7 +600,7 @@ form {
     display:block;
     background-color: darkgrey;
     padding:2%;
-    height:45vh;
+    min-height:45vh;
     z-index:1;
 }
 
@@ -607,11 +610,10 @@ form {
 } */
 
 .flex-container {
-    
     display:flex;
     flex-direction:row;
     margin-top:2%;
-    height:12%;
+    /* height:12%; */
 }
 
 .flex-item1 {
@@ -691,9 +693,6 @@ input.checkbox {
     color:white;
 }
 
-#homeModal {
-
-}
 
 
 /* ----------------- home.html ----------------- */
@@ -955,14 +954,4 @@ footer a .icons {
 
 
 
-
-
-
-
-
 /* ----------------- skilltree.html ----------------- */
-
-/* dongen testing */
-/* #home-todo-column>.flex-container{
-    height: 15%;
-} */
