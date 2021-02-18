@@ -61,22 +61,17 @@ body {
     animation: cube 12s ease-in forwards infinite;
 }
 
-
-
-/* ----------------- Universal CSS ----------------- */
-
-
-
 .splash {
     position:fixed;
     width:100%;
     height:100vh;
     background:rgb(172, 50, 50);
-    z-index:200;
+    z-index:100;
+    opacity:0.9;
 }
 
 #splash-loading {
-    width:10vw;
+    width: 5vw;
     margin: auto;
 }
 
@@ -88,6 +83,10 @@ body {
     background:rgb(172, 50, 50);
     z-index:-10;
 }
+
+
+/* ----------------- Universal CSS ----------------- */
+
 
 
 /* ----------------- index.html ----------------- */
@@ -117,11 +116,9 @@ body {
 #signup-loading {
     width:5vw;
     height:5vh;
-}
-
-.signup-flexbox {
-    display:flex;
-    flex-direction: row;
+    margin:auto;
+    margin-right:50%;
+    padding:2%;
 }
 
 
@@ -207,13 +204,12 @@ form {
     max-width:370px;
 }
 
-
 #signup-btn {
-    height:50%;
     width:90%;
     border:0px;
-    padding:1.5%;
-    background-color:rgb(134, 31, 31);
+    padding:1%;
+    height:10%;
+    background-color:rgb(223, 79, 79);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
 }
@@ -221,7 +217,8 @@ form {
 #signup-btn:disabled {
     width:90%;
     border:0px;
-    padding:1.5%;
+    padding:1%;
+    height:10%;
     background-color:rgb(134, 31, 31);
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
@@ -602,22 +599,26 @@ form {
 }
 
 .flex-item2 {
-    padding:3%;
+    padding:1.5%;
     background-color: rgb(197, 63, 63);
     width:90%;
     color:white;
-    font-size:1vw;
+    font-size:1.2vw;
 }
 
 .flex-item3 {
     background-color: rgb(197, 63, 63);
     padding:3%;
-    padding-top:3%;
 }
 
 .home-info-container {
     display:block;
     margin-bottom:2%;
+}
+
+.flex-container-shop {
+    display:flex;
+    flex-direction:row;
 }
 
 .home-info-col {
@@ -669,7 +670,9 @@ input.checkbox {
     color:white;
 }
 
+#homeModal {
 
+}
 
 
 /* ----------------- home.html ----------------- */
@@ -684,6 +687,15 @@ input.checkbox {
     max-width:50vw;
     padding:1%;
     margin:auto;
+}
+
+#btn-div {
+    margin-left:1%;
+}
+
+.prev-btn {
+    display:block;
+    background-color:red;
 }
 
 
