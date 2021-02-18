@@ -138,6 +138,11 @@ body {
     color:white;
 }
 
+#tooltip {
+    background-color:rgb(223, 79, 79);
+    padding:1%;
+    border-radius:50%;
+}
 
 
 #toplogin-btn {
@@ -272,6 +277,13 @@ form {
     margin-left: auto;
     margin-right: auto;
     display:block;
+}
+
+.signup-feature-pic2 {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    padding-top:3%;
 }
 
 .signup-feature-content {
@@ -498,6 +510,8 @@ form {
 
 /* ----------------- home.html ----------------- */
 
+
+
 #home-page {
     background-color: white
 }
@@ -580,13 +594,20 @@ form {
 }
 
 .home-column {
+    display:block;
     background-color: darkgrey;
     padding:2%;
     height:45vh;
     z-index:1;
 }
 
+/* .external-flex-container {
+    display:inline-block;
+    width:100%;
+} */
+
 .flex-container {
+    
     display:flex;
     flex-direction:row;
     margin-top:2%;
@@ -693,9 +714,10 @@ input.checkbox {
     margin-left:1%;
 }
 
-.prev-btn {
+.prev-btn,
+.next-btn {
     display:block;
-    background-color:red;
+    width:10%;
 }
 
 
@@ -835,7 +857,7 @@ footer a .icons {
 /* ----------------- skilltree.html ----------------- */
 
 #skill-tree-page {
-    background-color:rgb(223, 79, 79);
+    background-color:rgb(223, 79, 79)
 }
 
 #skill-tree-heading {
@@ -864,9 +886,28 @@ footer a .icons {
     height:80%;
 }
 
+#skill-tree-legend {
+    color:white;
+    font: 700 1vw "Montserrat", sans-serif;
+    padding-left:1%;
+    width:10%;
+}
+
+#skill-tree-not-learnt {
+    background-color:rgb(233, 105, 105);
+    width:100%;
+    padding:5%;
+}
+
+#skill-tree-learnt {
+    background-color:rgb(155, 41, 41);
+    width:100%;
+    padding:5%;
+}
 
 .skill-tree-col {
     height:100%;
+    display:block;
 }
 
 .skill-header {
@@ -879,8 +920,9 @@ footer a .icons {
 }
 
 .skill-line {
+    display:inline-block;
     border-left: 15px solid white;
-    height: 80vh;
+    height:100%;
     position: absolute;
     left: 50%;
     margin-left: -3px;
@@ -895,7 +937,7 @@ footer a .icons {
     display:block;
     margin:auto;
     width:80%;
-    height:40%;
+    height:20%;
     margin-top:20%;
     box-shadow: 5px 5px 6px -4px #000000;
 }
@@ -907,7 +949,7 @@ footer a .icons {
     display:block;
     margin:auto;
     width:80%;
-    height:40%;
+    height:20%;
     margin-top:20%;
 }
 
@@ -921,6 +963,6 @@ footer a .icons {
 /* ----------------- skilltree.html ----------------- */
 
 /* dongen testing */
-#home-todo-column>.flex-container{
+/* #home-todo-column>.flex-container{
     height: 15%;
-}
+} */
