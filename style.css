@@ -516,8 +516,6 @@ form {
 }
 
 
-
-
 /* ----------------- terms.html ----------------- */
 
 /* ----------------- home.html ----------------- */
@@ -537,6 +535,10 @@ form {
     background-color: rgb(172, 50, 50);
     padding-top:0.5%;
     padding-bottom:0.5%;
+}
+
+#logout-btn {
+    background-color:rgb(172, 50, 50);
 }
 
 .home-top-row {
