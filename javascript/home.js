@@ -265,14 +265,14 @@ $("#home-todo-add").keypress(function(event) {
 
             todos[todo[0]] = [dueDate,0];
        }        
-       var height = $("#home-todo-column").height();
-       console.log(height);
-       height = height + 10;
-       console.log(height);
-       $("#home-todo-column").css({"height": height+"px"}); 
+    //    var height = $("#home-todo-column").height();
+    //    console.log(height);
+    //    height = height + 10;
+    //    console.log(height);
+    //    $("#home-todo-column").css({"height": height+"px"}); 
        updateTodo();
-       $("#home-todo-add").val('');
-       //$(':focus').blur()          
+    //    $("#home-todo-add").val('');
+       $(':focus').blur()          
     } 
 }); 
 
