@@ -78,6 +78,7 @@ Since PokePlanner is a productivity website, tasks are crucial as it allows the 
 
 * PokeAPI had a daily rate limit of 300 requests per resource per IP address. We believe this is more than sufficient but it should be noted that if one was to consistently "spam" the GET requests by visiting the webpage many, many times a day, the limit may be hit causing certain images to not be initialized properly.
 
+* RestDB is sometimes relatively slow to respond which may cause some GET, PATCH requests to be overriden if the user completes tasks in extremely quick succession which is highly unlikely but should be noted.
 
 
 <h2>Credits<h2>
