@@ -140,7 +140,7 @@ body {
     color:white;
 }
 
-.tooltip {
+.tooltips {
     background-color:rgb(223, 79, 79);
     padding:1%;
     border-radius:20%;
@@ -579,9 +579,9 @@ form {
     /* height:45vh; */
 }
 
-.home-middle-row {
-    /* height:45vh; */
-}
+/* .home-middle-row {
+     height:45vh; 
+} */
 
 .home-title {
     color:rgb(172, 50, 50);
@@ -799,7 +799,7 @@ footer a .icons {
 .main-content {
     display: grid;
     grid-auto-flow: row;
-    grid-template-rows: repeat(10, 170px) 80px;
+    grid-template-rows: repeat(5, 170px) 80px;
     grid-template-columns: repeat(7, minmax(170px, 1fr));
     padding:1%;
     

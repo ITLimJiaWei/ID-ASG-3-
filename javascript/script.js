@@ -1,6 +1,6 @@
 const splash = document.querySelector('.splash')
 
-document.addEventListener('DOMContentLoaded',(e)=>{
+document.addEventListener('DOMContentLoaded',(e)=>{ //loading screen
   setTimeout(()=>{
     splash.classList.add('display-none');
   }, 2000);
@@ -10,8 +10,8 @@ let APIKEY = "60213a203f9eb665a16892a7";
 
 $(document).ready(function () {
     
-    $('#tooltip').hide();
-    $("#signup-username").on("focusout",function(){
+    $('.tooltips').hide();  //hide tooltips
+    $("#signup-username").on("focusout",function(){ //check if user exists
         let username =  $("#signup-username").val();
         let query = '"username":"'+username+'"';
         let settings = {
@@ -26,23 +26,17 @@ $(document).ready(function () {
             }
         }
         $.ajax(settings).done(function (response) {
-            //console.log("Checking for user");
-            //console.log(response);
-            if(jQuery.isEmptyObject(response)){
-                //console.log("No exisitng user found, proceed");
+            if(jQuery.isEmptyObject(response)){ //user dosent exist, enable button
                 $("#signup-btn").attr("disabled", false);
                 $("#signup-loading"). attr("hidden", true);
-            }else{
-                //console.log("Exisitng user found")
-                //alert("Exisitng user found!");
+            }else{  //user exists, disable button and prompt 
                 const input = document.querySelector('#signup-username');
-                const tooltip = document.querySelector('#tooltip');
-                
+                const tooltip = document.querySelector('#username-tooltip');
                 Popper.createPopper(input, tooltip, {
                     placement: 'right',
                 });
-                $('#tooltip').show();              
-                setTimeout(function(){ $('#tooltip').hide(); }, 3000);
+                $('#username-tooltip').show();              
+                setTimeout(function(){ $('#username-tooltip').hide(); }, 3000);
                 $("#signup-form").trigger("reset");
                 $("#signup-btn"). attr("disabled", true);
                 $("#signup-loading"). attr("hidden", false);
@@ -50,16 +44,13 @@ $(document).ready(function () {
         });
     });
 
-
     $("#signup-btn").on("click", function (e) {
         e.preventDefault();
-
-        //you are to do your own data validation
         let signupUsername = $("#signup-username").val();
         let signupPassword = $("#signup-password").val();
         let signupConfirmPassword = $("#signup-confirmpassword").val();
         let validInput = false;
-        if(signupUsername){
+        if(signupUsername){ //check if input is blank
             if(signupPassword!=""){
                 if(signupPassword==signupConfirmPassword){
                     validInput=true;
@@ -68,7 +59,7 @@ $(document).ready(function () {
         }
         
         if (validInput){
-            let currentDate = new Date();
+            let currentDate = new Date();   //this is sample data for every new user
             let ystdDate = new Date();
             ystdDate.setDate(ystdDate.getDate()-1);
             let tmrwDate  = new Date();
@@ -105,9 +96,7 @@ $(document).ready(function () {
                 }
             }
             
-            $.ajax(settings).done(function (response) {
-                console.log(response);
-                //console.log("Creating new user");            
+            $.ajax(settings).done(function (response) {     //save data to sessionStorage        
                 sessionStorage.setItem("username",signupUsername)
                 sessionStorage.setItem("password",signupPassword)  
                 sessionStorage.setItem("id",response._id)
@@ -124,15 +113,20 @@ $(document).ready(function () {
                 sessionStorage.setItem("maxexperience",response.maxexperience);
                 sessionStorage.setItem("lastevolve",response.lastevolve);
                 sessionStorage.setItem("skilltree",response.skilltree);
-                window.location.href = "selection.html";       
+                window.location.href = "selection.html";     //href to avatar selection 
             });                       
-        }else{
-            alert("Wrong input!");
+        }else{  //invalid input, prompt user
+            const input = document.querySelector('#signup-password');
+            const tooltip = document.querySelector('#password-tooltip');
+            Popper.createPopper(input, tooltip, {
+                placement: 'right',
+            });
+            $('#password-tooltip').show();              
+            setTimeout(function(){ $('#password-tooltip').hide(); }, 3000);
             $("#signup-form").trigger("reset");
             $("#signup-btn"). attr("disabled", true);
             $("#signup-loading"). attr("hidden", false);
         }
     });
- 
 });   
 

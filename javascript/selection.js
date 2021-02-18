@@ -4,9 +4,9 @@ let APIKEY = "60213a203f9eb665a16892a7";
 $(document).ready(function () {
   let avatar;
   let avatar_img_url;
-  var starters = ["pichu","charmander","bulbasaur","squirtle"]
+  var starters = ["pichu","charmander","bulbasaur","squirtle"]  //preset 4 starters (pichu was used instead of pikachu due to api issues)
   var i;
-  for (i = 0; i < starters.length; i++) {
+  for (i = 0; i < starters.length; i++) {   //append avatar sprites into screen
     let pokemonName = starters[i];
     let url = "https://pokeapi.co/api/v2/pokemon/"+pokemonName;
     var settings = {
@@ -15,33 +15,24 @@ $(document).ready(function () {
       "timeout": 0,
       
     };
-    
     $.ajax(settings).done(function (response) {
-      //console.log(response)
-      let id = response.id;
-      //console.log(id);
       let sprite = response.sprites.front_default;
-      //sprite = response.sprites.other["official-artwork"].front_default; //Official artwork ver
-      //console.log(sprite);
       let elementid = "#" + pokemonName;
       $(elementid).attr("src",sprite);
       avatar_img_url=sprite;
     });
   }
   
-  $(".card").on("click",function(){
+  $(".card").on("click",function(){ //select avatar
     $(".card").removeClass('selected');
     $(this).addClass('selected');
     $("#select-btn").attr("disabled", false);
     avatar = $(this).attr("data-pokemon");
-    avatar_img_url=$("img",this).attr("src");
-    //console.log(avatar_img_url);
+    avatar_img_url=$("img",this).attr("src");;
   });
 
-  $("#select-btn").on("click",function(){
+  $("#select-btn").on("click",function(){ //confirm selection, bind avatar img
     let id = sessionStorage.getItem("id");
-    //console.log(avatar);
-
     let jsondata = {
       "avatar": avatar,
       "avatar_img_url": avatar_img_url
@@ -62,23 +53,8 @@ $(document).ready(function () {
     $.ajax(settings).done(function (response) {
         //console.log(response);
         sessionStorage.setItem("avatar",avatar);
-        sessionStorage.setItem("avatar_img_url",avatar_img_url);
-        window.location.href = "home.html";
+        sessionStorage.setItem("avatar_img_url",avatar_img_url);  //bind avatar image
+        window.location.href = "home.html"; //href to home page
     });
   });
 });
-
-//GET request for nugget(to be implemeneted) ?? TBC
-
-// var settings = {
-//   "url": "https://pokeapi.co/api/v2/item/nugget/",
-//   "method": "GET",
-//   "timeout": 0,
-//   "headers": {
-//     "Cookie": "__cfduid=d75a766d734b3a895b3a683d8dd6f587e1613275356"
-//   },
-// };
-
-// $.ajax(settings).done(function (response) {
-//   console.log(response);
-// });
