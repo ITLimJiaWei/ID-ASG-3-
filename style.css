@@ -11,7 +11,7 @@ body {
     height:100%;
     width:100%;
     overflow-x: hidden; 
-  }
+}
 
 
 .navbar-custom { 
@@ -84,6 +84,9 @@ body {
     z-index:-10;
 }
 
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
 
 
 
@@ -143,7 +146,7 @@ body {
 .tooltips {
     background-color:rgb(223, 79, 79);
     padding:1%;
-    border-radius:20%;
+    border-radius: 4px;
 }
 
 
@@ -343,8 +346,15 @@ form {
     margin: 0px;
 }
 
+.login-form-outer {
+    height:50%;
+}
+
 #login-logo {
-    height:25%;
+    height:35%;
+    text-align:center;
+    display:block;
+    margin:auto;
 }
 
 #login-username,
@@ -542,12 +552,12 @@ form {
 
 #home-username {
     color:white;
-    font-size:1.5vw;
+    font: 500 1.5vw "Montserrat", sans-serif;
 }
 
 #home-level {
     color:white;
-    font-size:1vw;
+    font: 500 1vw "Montserrat", sans-serif;
 }
 
 .home-top-col2 {
