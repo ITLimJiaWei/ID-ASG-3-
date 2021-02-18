@@ -40,6 +40,7 @@ Since PokePlanner is a productivity website, tasks are crucial as it allows the 
 3. Calendar <br>
 
 
+
 <h3>Future Features</h3>
 
 1. PokePlanner can be improved in some ways such as allowing the Skill Tree(PokeSkills) to be customizable and not only be limited to the four modules included in the current build of the website. Though, this would require extensive work both front and back-end.
@@ -101,7 +102,7 @@ Since PokePlanner is a productivity website, tasks are crucial as it allows the 
 <h3>Media</h3>
 
 * Pokemon Image(index.html) - https://www.pngegg.com/en/png-wnowr/download
-
+* Task Completion Sound - https://opengameart.org/content/completion-sound
 
 <h2>Links</h2>
 
