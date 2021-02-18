@@ -198,8 +198,8 @@ function updateTodo(){
         $.ajax(settings).done(function () {});
 }
 function updateShop(){
-    // $("#home-shop-column>div").remove();
-    for (var item in shop) { 
+    $("#home-shop-column>div").remove();
+    for (var item in shop) {
         let cost = shop[item];
         $("#home-shop-column").append('<div class="flex-container"><div class="flex-item1"><input type="checkbox" class="checkbox" data-item="'+item+'"></div><div class="flex-item2">'+item+'</div><div class="flex-item3"><div class="flex-container-shop"><div id="nugget-count">'+cost+'</div><img src="pictures/nugget.png" alt="PokePlanner Currency Icon"> </div></div><div class="flex-item3"><div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="sr-only">Toggle Dropdown</span></button><div class="dropdown-menu"><button type="button" class="btn btn-light btn-sm delete-button dropdown-item" data-item="'+item+'">Delete</button></div></div></div></div>');       
     }
