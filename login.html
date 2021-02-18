@@ -15,17 +15,19 @@
   <body id = "login-page">
     
     <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_HSr89w.json" id="video" background="transparent"  speed="1"  loop autoplay></lottie-player>
-    <div class="container-fluid">
+    <img src="pictures/logo_transparent.png" id="login-logo">
+    <div class="container-fluid login-container">
       <div class="row">
         <div class="col-1">
 
         </div>
+        
         <div class="col-10 login-form-outer">
-          <img src="pictures/logo_transparent.png" id="login-logo">
+          
           <form id="login-form">
             <input type="text" id="login-username" class="form-username" placeholder="Username(case-sensitive)"><br>
             <div id="username-tooltip" role="tooltip" class="tooltips" >Username not found!</div>
-            <input type="text" id="login-password"  placeholder="Password"><br>
+            <input type="password" id="login-password"  placeholder="Password"><br>
             <div id="password-tooltip" role="tooltip" class="tooltips" >Wrong password!</div>
             <button type="button" id="login-btn" disabled >Login</button>
             <lottie-player src="https://assets10.lottiefiles.com/temp/lf20_Tw0dyZ.json"  background="transparent"  speed="1"  id="login-loading"  loop  autoplay></lottie-player>

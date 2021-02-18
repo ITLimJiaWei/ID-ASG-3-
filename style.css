@@ -892,7 +892,7 @@ footer a .icons {
 .skill-tree-top-container {
     padding:1%;
     margin-top:3%;
-    height:80%;
+    
 }
 
 #skill-tree-legend {
@@ -903,7 +903,7 @@ footer a .icons {
 }
 
 #skill-tree-not-learnt {
-    background-color:rgb(233, 105, 105);
+    background-color:rgb(233, 105, 105);    
     width:100%;
     padding:5%;
 }
@@ -937,6 +937,7 @@ footer a .icons {
     margin-left: -3px;
     top: 0;
     z-index:-1;
+    
 }
 
 .skill-content {
@@ -946,9 +947,9 @@ footer a .icons {
     display:block;
     margin:auto;
     width:80%;
-    height:20%;
-    margin-top:20%;
+    margin-top:15%;
     box-shadow: 5px 5px 6px -4px #000000;
+    
 }
 
 .learnt {
