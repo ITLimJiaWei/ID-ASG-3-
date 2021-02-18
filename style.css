@@ -385,7 +385,7 @@ form {
 }
 
 .selection-logo {
-    height:30%;
+    height:25%;
     margin-left: auto;
     margin-right: auto;
     display:block;
@@ -396,17 +396,15 @@ form {
     font-family:Arial, Helvetica, sans-serif;
     font-size:2vw;
     text-align: center;
-    margin-bottom:2%;
-    
 }
 
 .selection-card-img {
-    height:30vh;
+    height:20vh;
 }
 
 .selection-card-deck {
     padding:5%;
-   
+    justify-content: center;
 }
 
 .selection-container1,
@@ -418,7 +416,8 @@ form {
 
 .selection-card {
     box-shadow: 5px 5px 6px -4px #000000;
-
+    max-width:15vw;
+    height:50%;
 }
 
 .selected,
@@ -433,10 +432,10 @@ form {
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
     text-align:center;
-    margin-left: auto;
-    margin-right: auto;
+    margin:auto;
+    margin-bottom:5%;
     display:block;
-    margin-top:2%;
+    margin-top:1%;
     width:60%;
 }
 
@@ -447,11 +446,7 @@ form {
     color:white;
     box-shadow: 5px 5px 6px -4px #000000;
     text-align:center;
-    margin-left: auto;
-    margin-right: auto;
-    display:block;
-    margin-top:2%;
-    width:60%;
+    width:50%;
     margin-bottom:5%;
 
 }
