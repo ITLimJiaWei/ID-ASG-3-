@@ -53,13 +53,15 @@ Since PokePlanner is a productivity website, tasks are crucial as it allows the 
 
 <P> Testing is very important in all sorts of programming and especially in web development. Since our website could be deployed on a broad range of devices with varying resolutions, we tried our best to make it as responsive as possible. Furthermore, since PokePlanner relies on restDB and PokeAPI, it is crucial we test that the database, front-end and back-end are functioning correctly. We have put PokePlanner through various validators which are listed below to ensure users have an optimal experience.</p>
 
-
-
-
-
 <h3>Online Validators Used</h3>
 
-
+* W3C MarkUp Validation - https://validator.w3.org/
+* W3C CSS Validation - https://jigsaw.w3.org/css-validator/
+* W3C Link Checking - https://color.a11y.com/Contrast/
+* Color Contrast Accessibility Validation
+* Spell Checking - https://typosaur.us/
+* Alt Text Checking - https://rushax.com/tools/alt-tag-checker/
+* JSHint - https://jshint.com/
 
 
 <h3>Devices and Resolutions Used</h3>
@@ -98,6 +100,7 @@ Since PokePlanner is a productivity website, tasks are crucial as it allows the 
 * PokeAPI - https://pokeapi.co/
 * Popper.js - https://popper.js.org/
 * Bootstrap - https://getbootstrap.com/
+* RestDB - https://restdb.io/
 
 
 
