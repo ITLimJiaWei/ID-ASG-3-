@@ -11,7 +11,7 @@ $(document).ready(function () {
     let skilltree = JSON.parse(sessionStorage.getItem("skilltree"));
     let coins = parseInt(sessionStorage.getItem("coins"));  //load coins (was not done in a common js due to need for manipulation in some pages)
     $("#nugget-count").text(coins);
-    $("button").remove();
+    $("skill-content").remove();
     for (var module in modules) {    //append modules
         let id = "#" + module;
         for (var skill in modules[module]) { //append skills into modules
