@@ -17,7 +17,7 @@ $(document).ready(function () {
                 "x-apikey": APIKEY,
                 "cache-control": "no-cache"
             }
-        }
+        };
         $.ajax(settings).done(function (response) {
             if (jQuery.isEmptyObject(response)) {     //User not found
                 const input = document.querySelector('#login-username');
@@ -59,7 +59,7 @@ $(document).ready(function () {
                     "x-apikey": APIKEY,
                     "cache-control": "no-cache"
                 }
-            }
+            };
 
             $.ajax(settings).done(function (response) {
                 try {    //if password is wrong, will result in error, handled below

@@ -13,11 +13,15 @@ PokePlanner aims to allow users to track their habits and set goals for themselv
 
 Date        | Description                                               | Status
 ----------- | --------------------------------------------------------- | ------
+10/2/2021   | Added signup and login function                           |  Done 
+11/2/2021   | Added pokemon avatar api                                  |  Done 
 12/2/2021   | Added functionality of removing/creating tasks            |  Done 
-13/2/2021   | Finished selection.html and login.html                    |  Done 
+13/2/2021   | Finished selection.html and login.html                    |  Done
 13/2/2021   | Made index.html,login.html and home.html fully responsive |  Done 
 14/2/2021   | Finished base template of calendar.html                   |  Done 
 15/2/2021   | Added Splash Screen                                       |  Done 
+15/2/2021   | Added Date Tracking for tasks                             |  Done 
+16/2/2021   | Added Modals, Todo Date fix                               |  Done 
 17/2/2021   | Main Functionality of site is complete                    |  Done 
 17/2/2021   | Functionality of calendar is complete                     |  Done 
 18/2/2021   | UI is complete                                            |  Done 
@@ -38,7 +42,17 @@ We intend to allow users to pick their character/avatar from 4 initial pokemon f
 2. Tasks <br>
 Since PokePlanner is a productivity website, tasks are crucial as it allows the user to keep track of their work and also gives them a sense of accomplishment when a task is finished. We utilized restDB to incorporate account authentication and to also keep track of all the user's tasks.
 
-3. Calendar <br>
+3. Shop <br>
+Users can earn nuggets or in game currency after completing tasks, this can be used to purchase in game items like rare candy or custom rewards with prices set by users.
+
+4. Gamification <br>
+User has health level, experience level, as well as nuggets. User can also level up and evolve at level 10 and 20, at which point the pokemon avatar will also evovle accordingly.
+
+5. Calendar <br>
+The calendar feature showcases the due date of the to do tasks in a calendar format for easy viewing.
+
+6. Skill Tree <br>
+The Skill Tree feature references Information Technology diploma modules and the relevant skills taught in them. This encourages users as it rewards them when they pick up new skills.
 
 
 
@@ -81,7 +95,7 @@ Since PokePlanner is a productivity website, tasks are crucial as it allows the 
 
 * PokeAPI had a daily rate limit of 300 requests per resource per IP address. We believe this is more than sufficient but it should be noted that if one was to consistently "spam" the GET requests by visiting the webpage many, many times a day, the limit may be hit causing certain images to not be initialized properly.
 
-* RestDB is sometimes relatively slow to respond which may cause some GET, PATCH requests to be overriden if the user completes tasks in extremely quick succession which is highly unlikely but should be noted.
+* RestDB is sometimes relatively slow to respond which may cause some GET, PATCH requests to be overriden if the user completes tasks in extremely quick succession which is highly unlikely but should be noted. Furthermore, if user redirects before the reqeust is completed, the request will be cancelled
 
 
 <h2>Credits<h2>

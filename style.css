@@ -936,14 +936,15 @@ input.checkbox {
 }
 
 .learnt {
+
     color:white;
     background-color:rgb(155, 41, 41);
     border:0px;
     display:block;
     margin:auto;
     width:80%;
-    height:20%;
-    margin-top:20%;
+    margin-top:15%;
+    box-shadow: 5px 5px 6px -4px #000000;
 }
 
 

@@ -1,8 +1,8 @@
 let APIKEY = "60213a203f9eb665a16892a7";
-const splash = document.querySelector('.splash')
+const splash = document.querySelector('.splash');
 
 var bleep = new Audio();
-bleep.src = "sounds/completetask_0.mp3"
+bleep.src = "sounds/completetask_0.mp3";
 
 function toTitleCase(str) {     //from stackoverflow
     return str.replace(
@@ -29,9 +29,7 @@ $(document).ready(function () {
     let lastevolve = parseInt(sessionStorage.getItem("lastevolve"));
     let overdue = [];   //overdue tasks for later
 
-    if (experience == 0 && maxexperience == 50) {  //show welcome screen if player is new
-        $('#introHomeModal').modal({ show: true });
-    }
+
 
     function updatePage() {  //updates player information
         healthbar = health / maxhealth * 100;
@@ -110,7 +108,7 @@ $(document).ready(function () {
             },
             "processData": false,
             "data": JSON.stringify(jsondata)
-        }
+        };
         $.ajax(settings).done(function (response) {
             sessionStorage.setItem("avatar", response.avatar);
             sessionStorage.setItem("avatar_img_url", response.avatar_img_url);
@@ -161,7 +159,7 @@ $(document).ready(function () {
             },
             "processData": false,
             "data": JSON.stringify(jsondata)
-        }
+        };
         $.ajax(settings).done();
     }
 
@@ -207,13 +205,13 @@ $(document).ready(function () {
             },
             "processData": false,
             "data": JSON.stringify(jsondata)
-        }
+        };
         $.ajax(settings).done();
     }
 
     function updateShop() {
         $("#home-shop-column>div").remove();        //empty the div
-        $("#home-shop-column").append('<div class="flex-container" id="rarecandy"><div class="flex-item1"><input type="checkbox" class="checkbox" onmousedown="bleep.play()" ></div><div class="flex-item2"><img src="pictures/rare-candy.png" alt="Rare Candy Picture">+1 Level</div><div class="flex-item3"><div class="flex-container-shop"><div class="nugget-count-class">100</div><img src="pictures/nugget.png" alt="PokePlanner Currency Icon"> </div></div><div class="flex-item3"><div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="sr-only">Toggle Dropdown</span></button><div class="dropdown-menu"><button type="button" class="btn btn-light btn-sm delete-button dropdown-item" >Delete</button></div></div></div></div>')
+        $("#home-shop-column").append('<div class="flex-container" id="rarecandy"><div class="flex-item1"><input type="checkbox" class="checkbox" onmousedown="bleep.play()" ></div><div class="flex-item2"><img src="pictures/rare-candy.png" alt="Rare Candy Picture">+1 Level</div><div class="flex-item3"><div class="flex-container-shop"><div class="nugget-count-class">100</div><img src="pictures/nugget.png" alt="PokePlanner Currency Icon"> </div></div><div class="flex-item3"><div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="sr-only">Toggle Dropdown</span></button><div class="dropdown-menu"><button type="button" class="btn btn-light btn-sm delete-button dropdown-item" >Delete</button></div></div></div></div>');
         for (var item in shop) {        //apending shop items
             let cost = shop[item];
             $("#home-shop-column").append('<div class="flex-container"><div class="flex-item1"><input type="checkbox" class="checkbox" onmousedown="bleep.play()" data-item="' + item + '"></div><div class="flex-item2">' + item + '</div><div class="flex-item3"><div class="flex-container-shop"><div class="nugget-count-class">' + cost + '</div><img src="pictures/nugget.png" alt="PokePlanner Currency Icon"> </div></div><div class="flex-item3"><div class="btn-group"><button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="sr-only">Toggle Dropdown</span></button><div class="dropdown-menu"><button type="button" class="btn btn-light btn-sm delete-button dropdown-item" data-item="' + item + '">Delete</button></div></div></div></div>');
@@ -235,7 +233,7 @@ $(document).ready(function () {
             },
             "processData": false,
             "data": JSON.stringify(jsondata)
-        }
+        };
         $.ajax(settings).done();
     }
 
@@ -243,15 +241,27 @@ $(document).ready(function () {
     updateDailies();
     updateTodo();
     updateShop();
+    checkOverdue();
+    setTimeout(newPlayerGuide, 6000);
 
-    if (overdue.length != 0) {  //overdue tasks alert will only run once
-        let overduestring = "";
-        for (let i = 0; i < overdue.length; i++) {
-            overduestring += overdue[i] + ", ";
+    function newPlayerGuide() {
+        if (experience == 0 && maxexperience == 50) {  //show welcome screen if player is new
+            $("#homeModalTitle").text("Welcome to PokéPlanner");
+            $(".modal-body").html("<h5><u>Description</u></h5><p>Here you can keep track of your tasks and even reward yourself all while having fun! This producitvity site is only as useful as how committed you are to it, so pleasepace your all your Daillies, To Do's, Rewards and have fun!</p><h5><u>Daillies</u></h5><p>These are tasks that repeat daily and are worth 10 gold and experience points</p><h5><u>To Do's</u></h5><p>Unlike Daillies, To Do's are worth more gold and experience points at 20 each but can only be completed once.</p><h5><u>Shop</u></h5><p>Here you can reward yourself with the gold you worked so hard to earn for a 'Cheat Day' or a rare candy to level up your character albeit for a high price of 100 gold. You caneven set reward costs to negative integers if you really require that extra gold and rest!</p><h5><u>Evolution</u></h5><p>Your starter pokemon will evolve at levels 10 and 20. However, health only regenerates daily so remember to complete your tasks!</p>");
+            $('#homeModal').modal({ show: true });
         }
-        overduestring2 = overduestring.slice(0, -2);
-        $(".modal-body").text("You didn't do: " + overduestring2);
-        $('#homeModal').modal({ show: true });
+    }
+    function checkOverdue() {
+        if (overdue.length != 0) {  //overdue tasks alert will only run once
+            let overduestring = "";
+            for (let i = 0; i < overdue.length; i++) {
+                overduestring += overdue[i] + ", ";
+            }
+            let overduestring2 = overduestring.slice(0, -2);
+            $("#homeModalTitle").text("Oaks Words echoed...");
+            $(".modal-body").text("You didn't do: " + overduestring2);
+            $('#homeModal').modal({ show: true });
+        }
     }
 
     $("#home-daily-add").keypress(function (event) {     //dailies input 
@@ -280,7 +290,7 @@ $(document).ready(function () {
 
                     todos[todo[0]] = [dueDate, 0];
                 }
-                updateTodo()
+                updateTodo();
                 $("#home-todo-add").val('');
             }
         }
