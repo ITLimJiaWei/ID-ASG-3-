@@ -552,6 +552,7 @@ form {
 }
 
 #home-starter-pic {
+    width:100%;
     background-color:rgb(243, 119, 99);
     margin:10%;
     border-radius:8px;
