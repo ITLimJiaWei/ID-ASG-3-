@@ -33,7 +33,7 @@ body {
     margin-left:40px;
 }
 
-#nugget-count {
+.nugget-count-class {
     color:white;
 }
 
@@ -128,7 +128,7 @@ input:focus, textarea:focus, select:focus{
 
 
 .signup-top-container {
-    box-shadow: 5px 5px 6px -4px #000000;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.75);
     background-color: rgb(172, 50, 50);
     margin-bottom:3%;
 }
@@ -571,7 +571,7 @@ form {
     margin-left:2%;
 }
 
-#top-flex-container {
+.top-flex-container {
     display:flex;
     flex-direction: row;
     width:100%;
