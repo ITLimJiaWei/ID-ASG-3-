@@ -241,8 +241,7 @@ form {
 }
 
 .signup-bottom-container {
-    padding:50px;
-    margin-bottom:50px;
+    padding:2%;
 }
 
 #signup-features-title {
@@ -265,7 +264,6 @@ form {
 }
 
 .signup-feature-col {
-    padding:10px;
     text-align: center;
 }
 
@@ -276,6 +274,13 @@ form {
 .signup-feature-flexbox {
     display:flex;
     flex-direction:column;
+}
+
+.signup-feature-pic1 {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    width:60%;
 }
 
 .signup-feature-pic {
@@ -310,7 +315,6 @@ form {
 }
 
 .signup-footer-row {
-    padding:10px;
     width: 100%;
 }
 
