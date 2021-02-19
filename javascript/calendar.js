@@ -17,7 +17,8 @@ Date.prototype.addDays = function (days) { //from stackoverflow
   var date = new Date(this.valueOf());
   date.setDate(date.getDate() + days);
   return date;
-}
+};
+
 let todos = JSON.parse(sessionStorage.getItem("todo"));  //parse in event dates to be appended into calendar, dailies are not considered events
 
 function updateCalendar(currentDate) { //refresh calendar
@@ -32,39 +33,67 @@ function updateCalendar(currentDate) { //refresh calendar
   var dayName = days[firstDay.getDay()];
   for (i = 0; i < noOfDays; i++) {  //make calendar
     dayName = days[firstDay.getDay()];
-    let x = $(".main-content").append('<div class="date ' + dayName + '" style="' + colors[i] + '">' + (i + 1) + '</div>');
+    $(".main-content").append('<div class="date ' + dayName + '" style="' + colors[i] + '">' + (i + 1) + '</div>');
     firstDay = firstDay.addDays(1);
   }
+  let eventPositionList={};
   for (var todo in todos) { //make events and grid position them
     let utcDate = todos[todo][0];
     let localDate = new Date(utcDate); //convert utc date to local date due to JSON.stringify auto conversion
-    let style;
+    let style = "";
     todos[todo][0] = localDate;
     let currentDay = localDate.getDate();
     let dateDiv = "div.date:nth-child(" + (currentDay + 1) + ")"; //also need to grid position the dates of those events
+    var row = 0;
     if (localDate.getFullYear() == currentDate.getFullYear()) {
       if (localDate.getMonth() == month) {
         if (currentDay >= 1 && currentDay <= 4) {
           style = "grid-row:1";
           $(dateDiv).css("grid-row", "1");
+          eventPositionList[todo]=[1,0];
+          row=1;
         } else if (currentDay >= 5 && currentDay <= 11) {
           style = "grid-row:2";
           $(dateDiv).css("grid-row", "2");
+          eventPositionList[todo]=[2,0];
+          row=2;
         }
         else if (currentDay >= 12 && currentDay <= 18) {
           style = "grid-row:3";
           $(dateDiv).css("grid-row", "3");
-          $(dateDiv).css("grid-row", "3");
+          eventPositionList[todo]=[3,0];
+          row=3;
         }
         else if (currentDay >= 19 && currentDay <= 25) {
           style = "grid-row:4";
           $(dateDiv).css("grid-row", "4");
+          eventPositionList[todo]=[4,0];
+          row=4;
         } else if (currentDay >= 26 && currentDay <= 31) {
           style = "grid-row:5";
           $(dateDiv).css("grid-row", "5");
+          eventPositionList[todo]=[5,0];
+          row=5;
         }
-        style += ";grid-column:" + colPos[currentDay - 1];
-        $(dateDiv).css("grid-column", colPos[currentDay - 1]);
+        var col = colPos[currentDay - 1];
+        var neww = true;
+        for (var x in eventPositionList){
+          var row2 = eventPositionList[x][0];
+          var col2 = eventPositionList[x][1];
+          console.log("["+col+","+row+"]");
+          console.log("["+col2+","+row2+"]");
+          console.log("break");
+          if (row2==row && col2 ==col){
+            neww = false;
+          }
+        }
+        if(neww){
+          style += ";grid-column:" + col ;
+          $(dateDiv).css("grid-column", col);
+        }else{
+          style += ";grid-column:" + col +";padding-top:85px";
+        }
+        eventPositionList[todo][1] = col;
         $(".main-content").append('<div class="event" style="' + style + '"><div class="event__name">' + todo + '</div> </div>');
       }
     }
@@ -85,13 +114,14 @@ $(document).ready(function () {
     let month = currentDate.getMonth() + 1;
     currentDate.setMonth(month);
     updateCalendar(currentDate);
-  })
+  });
+
   $("#prev").on("click", function (e) {  //prev month
     e.preventDefault();
     let month = currentDate.getMonth() - 1;
     currentDate.setMonth(month);
     updateCalendar(currentDate);
-  })
+  });
 });
 
 
