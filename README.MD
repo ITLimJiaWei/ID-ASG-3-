@@ -21,6 +21,7 @@ Date        | Description                                               | Status
 17/2/2021   | Main Functionality of site is complete                    |  Done 
 17/2/2021   | Functionality of calendar is complete                     |  Done 
 18/2/2021   | UI is complete                                            |  Done 
+19/2/2021   | Validated all pages                                       |  Done 
  
 
 
@@ -101,7 +102,6 @@ Since PokePlanner is a productivity website, tasks are crucial as it allows the 
 * Popper.js - https://popper.js.org/
 * Bootstrap - https://getbootstrap.com/
 * RestDB - https://restdb.io/
-
 
 
 <h3>Media</h3>
