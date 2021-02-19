@@ -1,136 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>PokePlanner</title>
-    <link rel="icon" type="image/png" href="pictures/favicon-96x96.png" sizes="96x96" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
-  </head>
-  <body id="skill-tree-page">
 
-    <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="home.html">
-          <img src="pictures/logo_transparent-notext.png" alt="PokePlanner Logo" id="home-logo">
-          <span class="navbar-text" id="navbar-title">
-            <b>PokéPlanner</b>             
-          </span>
-        </a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>PokePlanner</title>
+  <link rel="icon" type="image/png" href="pictures/favicon-96x96.png" sizes="96x96" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
+</head>
 
-        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_HSr89w.json" id="video" background="transparent"  speed="1"  loop autoplay></lottie-player>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" id="navbar-tasks" href="home.html"><b>Tasks</b></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="navbar-calendar" href="calendar.html"><b>Calendar</b></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="navbar-skill-tree" href="skilltree.html"><b>Skill Tree</b></a>
-            </li>
-            
-            
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <div id="nugget-count">
-                
-              </div>
-            </li>
-            <li class="nav-item">
-              <img src="pictures/nugget.png" alt="PokePlanner Currency Icon"> 
-            </li>
-            <li class="nav-item">
-              <button type="button" class="btn btn-danger" id="logout-btn">Log Out</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<body id="skill-tree-page">
+
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">
+        <img src="pictures/logo_transparent-notext.png" alt="PokePlanner Logo" id="home-logo">
+        <span class="navbar-text" id="navbar-title">
+          <b>PokéPlanner</b>
+        </span>
+      </a>
 
 
-    <h2 id="skill-tree-heading">
-      PokéSkills
-    </h2>
-    <div id="skill-tree-desc">
-      Hone your skills in Information Technology and keep track of everything you learn!
-    </div>
-
-    <div id="skill-tree-legend">
-      <div id="skill-tree-not-learnt">
-        Not Learnt
-      </div>
-      <div id="skill-tree-learnt">
-        Learnt
-      </div>
-
-    </div>
-
-    
-    <div class="container-fluid skill-tree-top-container">
-      <div class="row">
-        <div class="col-3 skill-tree-col" id="prg2">
-          <h4 class="skill-header">
-            Programming II
-          </h4>
-          <div class="skill-line" ></div>
-        </div>
-        <div class="col-3 skill-tree-col" id="db">
-          <h4 class="skill-header">
-            Databases
-          </h4>
-          <div class="skill-line" ></div>
-
-        </div>
-        <div class="col-3 skill-tree-col" id="id"> 
-          <h4 class="skill-header">
-            Interactive Development
-          </h4>          
-          <div class="skill-line" ></div>
-                
-        </div>
-        <div class="col-3 skill-tree-col" id="as">
-          <h4 class="skill-header">
-            Advanced Statistics
-          </h4> 
-          <div class="skill-line" ></div>
+      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_HSr89w.json" id="video" background="transparent"
+        speed="1" loop autoplay></lottie-player>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" id="navbar-tasks" href="home.html"><b>Tasks</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navbar-calendar" href="calendar.html"><b>Calendar</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navbar-skill-tree" href="skilltree.html"><b>Skill Tree</b></a>
+          </li>
 
 
-        </div>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <div id="nugget-count">
+
+            </div>
+          </li>
+          <li class="nav-item">
+            <img src="pictures/nugget.png" alt="PokePlanner Currency Icon">
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-danger" id="logout-btn">Log Out</button>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <div class="modal fade" id="skilltreeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">A wild mewtwo appears!</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Congratulations on learning a new skill!
-            You have been awarded 100 nuggets!
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+
+  <h2 id="skill-tree-heading">
+    PokéSkills
+  </h2>
+  <div id="skill-tree-desc">
+    Hone your skills in Information Technology and keep track of everything you learn!
+  </div>
+
+  <div id="skill-tree-legend">
+    <div id="skill-tree-not-learnt">
+      Not Learnt
+    </div>
+    <div id="skill-tree-learnt">
+      Learnt
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid skill-tree-top-container">
+    <div class="row">
+      <div class="col-3 skill-tree-col" id="prg2">
+        <h4 class="skill-header">
+          Programming II
+        </h4>
+        <div class="skill-line"></div>
+      </div>
+      <div class="col-3 skill-tree-col" id="db">
+        <h4 class="skill-header">
+          Databases
+        </h4>
+        <div class="skill-line"></div>
+
+      </div>
+      <div class="col-3 skill-tree-col" id="id">
+        <h4 class="skill-header">
+          Interactive Development
+        </h4>
+        <div class="skill-line"></div>
+
+      </div>
+      <div class="col-3 skill-tree-col" id="as">
+        <h4 class="skill-header">
+          Advanced Statistics
+        </h4>
+        <div class="skill-line"></div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="skilltreeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">A wild mewtwo appears!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Congratulations on learning a new skill!
+          You have been awarded 100 nuggets!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-  <foooter>
+  <footer>
     <div class="container-fluid signup-footer">
       <div class="row signup-footer-row">
         <div class="col-4">
@@ -140,18 +146,18 @@
           </p>
         </div>
         <div class="col-5">
-          <a class="footer-content" href="policy.html"><b><u>Privacy Policy</u></b></a> 
+          <a class="footer-content" href="policy.html"><b><u>Privacy Policy</u></b></a>
           <p class="footer-content">
             By signing up and utilzing PokePlanner you agree to our website's policies stated in our
-            <a class="footer-anchor"  href="policy.html">Privacy Policy</a>
+            <a class="footer-anchor" href="policy.html">Privacy Policy</a>
           </p>
           <a class="footer-content" href="terms.html"><b><u>Terms of Service</u></b></a>
           <p class="footer-content">
             By signing up and utilzing PokePlanner you agree to our website's terms stated in our
-            <a class="footer-anchor"  href="terms.html">Terms of Service</a>
+            <a class="footer-anchor" href="terms.html">Terms of Service</a>
           </p>
 
-          <p id="footer-copyright">	&copy; PokePlanner 2021 </p>
+          <p id="footer-copyright"> &copy; PokePlanner 2021 </p>
         </div>
         <div class="col-3">
           <p class="footer-content"><b><u>Get in touch</u></b></p>
@@ -159,24 +165,27 @@
             &#128231; s10204971@connect.np.edu.sg<br>
             &#128231; s10202623@connect.np.edu.sg<br>
 
-            
+
           </div>
           <div class="footer-content">
             &#128241; +65 84358991 9AM - 6PM
           </div>
         </div>
-        </div>
       </div>
     </div>
   </footer>
-  
 
 
 
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="javascript/skilltree.js"></script>
-    <script src="javascript/common.js"></script>
-  </body>
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="javascript/skilltree.js"></script>
+  <script src="javascript/common.js"></script>
+</body>
+
 </html>
