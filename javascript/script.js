@@ -67,10 +67,10 @@ $(document).ready(function () {
 
         if (validInput) {
             let currentDate = new Date();   //this is sample data for every new user
-            let ystdDate = new Date();
-            ystdDate.setDate(ystdDate.getDate() - 1);
-            let tmrwDate = new Date();
-            tmrwDate.setDate(tmrwDate.getDate() + 1);
+            // let ystdDate = new Date();   //dev testing data
+            // ystdDate.setDate(ystdDate.getDate() - 1);
+            // let tmrwDate = new Date();
+            // tmrwDate.setDate(tmrwDate.getDate() + 1);
             let jsondata = {
                 "username": signupUsername,
                 "password": signupPassword,
@@ -78,9 +78,9 @@ $(document).ready(function () {
                 "experience": 0,
                 "health": 50,
                 "coins": 0,
-                "dailies": '{"Daily Ystd":"' + ystdDate + '","Daily Ystd2":"' + ystdDate + '","Daily Tdy":"' + currentDate + '","Daily Tmrw":"' + tmrwDate + '"}',
-                "todo": '{"Todo Ystd":["' + ystdDate + '",0],"Todo Tdy":["' + currentDate + '",0],"Todo Tmrw":["' + tmrwDate + '",0]}',
-                "shop": '{"test":2}',
+                "dailies": '{"Check In":"' + currentDate + '"}',
+                "todo": '{"Finish a task":["' + currentDate + '",0]}',
+                "shop": '{"Snack Bar":50}',
                 "maxhealth": 50,
                 "maxexperience": 50,
                 "lastevolve": 0,

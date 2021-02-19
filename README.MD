@@ -61,6 +61,8 @@ The Skill Tree feature references Information Technology diploma modules and the
 1. PokePlanner can be improved in some ways such as allowing the Skill Tree(PokeSkills) to be customizable and not only be limited to the four modules included in the current build of the website. Though, this would require extensive work both front and back-end.
 
 2. An inventory could also be added to allow users to showcase their acquired items from the rewards/shop menu in home.html. 
+   
+3. Tasks sorted by date, date filter
 
 
 
