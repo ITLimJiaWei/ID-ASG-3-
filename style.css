@@ -596,17 +596,6 @@ form {
 }
 
 .home-middle-container {
-<<<<<<< HEAD
-    padding:50px;
-    min-height:70%;
-}
-
-
-
-.home-middle-row {
-    height:70%
-}
-=======
     padding:1%;
     /* height:45vh; */
 }
@@ -614,7 +603,6 @@ form {
 /* .home-middle-row {
      height:45vh; 
 } */
->>>>>>> 1496b79b389ed58c725e83cc336ef1564ea7a4f4
 
 .home-title {
     color:rgb(172, 50, 50);
@@ -706,12 +694,7 @@ input.checkbox {
 
 .home-footer {
     background-color:rgb(172, 50, 50);
-<<<<<<< HEAD
-    bottom:0;
-    position:sticky;
-=======
     position:relative; 
->>>>>>> 1496b79b389ed58c725e83cc336ef1564ea7a4f4
     width:100%;
     overflow:hidden;
     height:15%;
@@ -728,15 +711,11 @@ input.checkbox {
     text-align:center;
 }
 
-<<<<<<< HEAD
-
-=======
 .home-footer-row {
     padding:1%;
     position:relative; 
     bottom:0;
 }
->>>>>>> 1496b79b389ed58c725e83cc336ef1564ea7a4f4
 
 .home-footer-anchor,
 .home-footer-anchor:hover {
@@ -763,39 +742,10 @@ input.checkbox {
     margin-left:1%;
 }
 
-<<<<<<< HEAD
-    
-#calendar-page {
-    overflow: hidden;
-    font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    color: white;
-    margin: 0;
-    padding: 0;
-    background: #4A4A4A;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}      
-    
-#calendar {
-    
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    width: 420px;
-    margin: 5% auto;
-    height: 40%;
-    overflow: hidden;
-=======
 .prev-btn,
 .next-btn {
     display:block;
     width:10%;
->>>>>>> 1496b79b389ed58c725e83cc336ef1564ea7a4f4
 }
 
 
