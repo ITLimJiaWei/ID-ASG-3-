@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>PokePlanner</title>
+    <title>PokéPlanner</title>
     <link rel="icon" type="image/png" href="pictures/favicon-96x96.png" sizes="96x96" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -13,12 +12,12 @@
     
   </head>
   <body id="calendar-page">
-
+    <!-- Background Video -->
     <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_HSr89w.json" id="video" background="transparent"  speed="1"  loop autoplay></lottie-player>
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid">
         <a class="navbar-brand" href="home.html">
-          <img src="pictures/logo_transparent-notext.png" id="home-logo">
+          <img src="pictures/logo_transparent-notext.png" alt="PokePlanner Logo" id="home-logo"> <!-- Navigation Bar -->
           <span class="navbar-text" id="navbar-title">
             <b>PokéPlanner</b>             
           </span>
@@ -36,7 +35,7 @@
               <a class="nav-link" id="navbar-calendar" href="calendar.html"><b>Calendar</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="navbar-skill-tree" href="skilltree.html"><b>Skill Tree</b></a>
+              <a class="nav-link" id="navbar-skill-tree" href="skilltree.html"><b>Skill Tree</b></a>   <!-- Navigation Bar -->
             </li>
             
             
@@ -50,17 +49,60 @@
             <li class="nav-item">
               <img src="pictures/nugget.png" alt="PokePlanner Currency Icon"> 
             </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-danger" id="logout-btn">Log Out</button>  
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <!-- PokeCalendar -->
+    <h2 id="calendar-heading">
+      PokéCalendar
+    </h2>
+    <div id="btn-div">
+      <button type="button" class="btn btn-warning prev-btn" id="prev">Previous</button>
+      <button type="button" class="btn btn-warning next-btn" id="next">Next</button>
+    </div>
+    
+    <div class="main-content">
+      <div class="month month--name" style="--color:#db7a7a">February</div>
+      <div class="date" style="--color:#db7f7a">1</div>
+      <div class="date" style="--color:#db847a">2</div>
+      <div class="date" style="--color:#db8d7a">3</div>
+      <div class="date" style="--color:#db8d7a">4</div>
+      <div class="date" style="--color:#db917a">5</div>
+      <div class="date" style="--color:#db967a">6</div>
+      <div class="date" style="--color:#db9a7a">7</div>
+      <div class="date" style="--color:#db9a7a">8</div>
+      <div class="date" style="--color:#db9f7a">9</div>
+      <div class="date" style="--color:#dba37a">10</div>
+      <div class="date" style="--color:#dba87a">11</div>
+      <div class="date" style="--color:#dbac7a">12</div>
+      <div class="date" style="--color:#dbb07a">13</div>
+      <div class="date" style="--color:#dbb57a">14</div>
+      <div class="date" style="--color:#dbbe7a">15</div>
+      <div class="date" style="--color:#dbc27a">16</div>
+      <div class="date" style="--color:#dbc77a">17</div>        <!-- PokeCalendar -->
+      <div class="date" style="--color:#dbd07a">18</div>
+      <div class="date" style="--color:#dbd47a">19</div>
+      <div class="date" style="--color:#dbd97a">20</div>
+      <div class="date" style="--color:#d9db7a">21</div>
+      <div class="date" style="--color:#d0db7a">22</div>
+      <div class="date" style="--color:#cbdb7a">23</div>
+      <div class="date" style="--color:#c7db7a">24</div>
+      <div class="date" style="--color:#c2db7a">25</div>
+      <div class="date" style="--color:#bedb7a">26</div>
+      <div class="date" style="--color:#b9db7a">27</div>
+      <div class="date" style="--color:#b5db7a">28</div>
+      
+      
+      
+     
 
-    <div id="calendar"></div>
-
-
-
-
+  </div>
+            <!-- Calendar Footer -->
 
     <footer>
 
@@ -81,26 +123,34 @@
             <a class="home-footer-content" href="terms.html"><b><u>Terms of Service</u></b></a>
             <p class="home-footer-content">
               By signing up and utilzing PokePlanner you agree to our website's terms stated in our
-              <a class="home-footer-anchor"  href="terms.html">Terms of Service</a>
+              <a class="home-footer-anchor"  href="terms.html">Terms of Service</a>      <!-- Calendar Footer -->
             </p>
 
             <p id="home-footer-copyright">	&copy; PokePlanner 2021 </p>
           </div>
           <div class="col-3">
             <div class="home-footer-content"><b><u>Get in touch</u></b></div>
-            <email class="home-footer-content">
+            <div class="home-footer-content">
               &#128231; s10204971@connect.np.edu.sg<br>
               &#128231; s10202623@connect.np.edu.sg<br>
 
               
+<<<<<<< HEAD
             </email>
             <mobile class="home-footer-content">
               
             </mobile>
           </div>
+=======
+            </div>
+            <div class="home-footer-content">
+              &#128241; +65 84358991 9AM - 6PM
+            </div>
+>>>>>>> 1496b79b389ed58c725e83cc336ef1564ea7a4f4
           </div>
+          
         </div>
-      </div>
+      </div>   <!-- Calendar Footer -->
     </footer>
 
     
@@ -108,6 +158,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="javascript/calendar.js"></script>
+    <script src="javascript/common.js"></script>
   </body>
 </html>
