@@ -1,18 +1,16 @@
 /* ----------------- Universal CSS ----------------- */
 
-html,
-body {
+html {
   margin:0;
   padding:0;
-  height:100%;
+  min-height:100%;
   width:100%;
+  position:relative; 
 }
 
 body {
-    height:100%;
-    width:100%;
     overflow-x: hidden; 
-  }
+}
 
 
 .navbar-custom { 
@@ -480,7 +478,11 @@ form {
 /* ----------------- home.html ----------------- */
 
 #home-page {
-    background-color: white
+    background-color: white;
+    min-height:100%;
+    width:100%;
+    position:relative; 
+    
 }
 
 #home-logo {
@@ -541,11 +543,13 @@ form {
 
 .home-middle-container {
     padding:50px;
-    height:70%;
+    min-height:70%;
 }
 
+
+
 .home-middle-row {
-    height:70%;
+    height:70%
 }
 
 .home-title {
@@ -559,6 +563,8 @@ form {
     width:100%;
     color:white;
 }
+
+
 
 .home-column {
     background-color: darkgrey;
@@ -615,13 +621,19 @@ input.checkbox {
 
 }
 
+.home-footer-row {
+    padding:10px;
+    bottom:0;
+}
+
 .home-footer {
     background-color:rgb(172, 50, 50);
-    position:relative; 
-    /* Dong En added this line  */
+    bottom:0;
+    position:sticky;
     width:100%;
-    bottom: 0;
+    overflow:hidden;
     height:15%;
+    
 }
 
 .home-footer-content,
@@ -634,9 +646,7 @@ input.checkbox {
     text-align:center;
 }
 
-.home-footer-row {
-    padding:10px;
-}
+
 
 .home-footer-anchor,
 .home-footer-anchor:hover {
@@ -662,11 +672,10 @@ input.checkbox {
 
     
 #calendar-page {
-    
     overflow: hidden;
     font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-weight: 100;
-    color: rgb(223, 79, 79);
+    color: white;
     margin: 0;
     padding: 0;
     background: #4A4A4A;
